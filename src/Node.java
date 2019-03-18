@@ -5,6 +5,7 @@ public class Node {
     private Node left;
     private Node right;
     private int key;
+    private int val;
     private int P;
     private int maxVal;
     private int color;
@@ -39,11 +40,7 @@ public class Node {
     }
 
     public int getKey() {
-        return key;
-    }
-
-    public void setKey(int key) {
-        this.key = key;
+        return endpoint.getValue();
     }
 
     public int getP() {

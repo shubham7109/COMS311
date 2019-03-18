@@ -22,7 +22,7 @@ public class Intervals {
     }
 
     public int findPOM(){
-        return rbTree.getRoot().getMaxVal();
+        return rbTree.root.getMaxVal();
     }
 
     public RBTree getRBTree(){
