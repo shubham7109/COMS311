@@ -7,12 +7,12 @@ public class Intervals {
 
     private int idCounter;
     private RBTree rbTree;
-    private ArrayList<Interval> interval;
+    private ArrayList<Interval> intervals;
 
     public Intervals() {
 
         rbTree = new RBTree();
-        interval = new ArrayList<>();
+        intervals = new ArrayList<>();
         idCounter = 1;
     }
 
@@ -22,7 +22,7 @@ public class Intervals {
      * @param b right interval
      */
     public void intervalInstert(int a, int b){
-        interval.add(new Interval(a,b,idCounter++));
+        intervals.add(new Interval(a,b,idCounter++));
         //TODO Update the RB tree based on the new interval
     }
 
@@ -67,11 +67,11 @@ public class Intervals {
             return intervalID;
         }
 
-        public Endpoint getLeft() {
+        public Endpoint getLeftEndpoint() {
             return left;
         }
 
-        public Endpoint getRight() {
+        public Endpoint getRightEndpoint() {
             return right;
         }
 
