@@ -7,8 +7,11 @@ public class RBTree {
 
 
     public RBTree() {
-        size = 0;
-        height = 0;
+       size = 0;
+       height = 0;
+       root = null;
+       nil = new Node();
+       nil.setColor(1);
 
     }
 
