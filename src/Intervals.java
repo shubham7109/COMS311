@@ -21,7 +21,7 @@ public class Intervals {
      * @param a left interval
      * @param b right interval
      */
-     public void intervalInstert(int a, int b){
+     public void intervalInsert(int a, int b){
         intervals.add(new Interval(a,b,idCounter));
         Endpoint leftE = new Endpoint(a);
         Endpoint rightE = new Endpoint(b);
