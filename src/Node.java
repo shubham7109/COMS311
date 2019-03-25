@@ -11,8 +11,10 @@ public class Node {
     private int color;
     private Endpoint endpoint;
     private Endpoint eMax;
+    private boolean isNodeNil = false;
 
     public Node() {
+
     }
 
     /**
@@ -73,7 +75,7 @@ public class Node {
      * @return Returns the val of the node based on the v.val formula
      */
     public int getVal() {
-        if(val == 0){
+        if(isNodeNil){
             //This node is a T.nil node
             return 0;
         } else{
@@ -125,6 +127,10 @@ public class Node {
         this.endpoint = endpoint;
     }
 
+    public void setNodeNil(boolean nodeNil) {
+        isNodeNil = nodeNil;
+    }
+
     /**
      * @return Returns an Endpoint object that represents e_max
      */
@@ -142,5 +148,29 @@ public class Node {
         else
             eMax= getRight().getEndpoint();
         return eMax;
+    }
+
+    public void setKey(int key) {
+        this.key = key;
+    }
+
+    public void setVal(int val) {
+        this.val = val;
+    }
+
+    public void setMaxVal(int maxVal) {
+        this.maxVal = maxVal;
+    }
+
+    public Endpoint geteMax() {
+        return eMax;
+    }
+
+    public void seteMax(Endpoint eMax) {
+        this.eMax = eMax;
+    }
+
+    public boolean isNodeNil() {
+        return isNodeNil;
     }
 }

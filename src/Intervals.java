@@ -22,21 +22,26 @@ public class Intervals {
      * @param b right interval
      */
      public void intervalInsert(int a, int b){
-        intervals.add(new Interval(a,b,idCounter));
-        Endpoint leftE = new Endpoint(a);
-        Endpoint rightE = new Endpoint(b);
+         Interval interval = new Interval(a,b,idCounter);
+
+        interval.left = new Endpoint(a);
+        interval.right = new Endpoint(b);
         Node leftENode = new Node();
         Node rightENode = new Node();
-        leftENode.setEndpoint(leftE);
-        rightENode.setEndpoint(rightE);
+        leftENode.setEndpoint(interval.left);
+        leftENode.setP(+1);
+        rightENode.setEndpoint(interval.right);
+        rightENode.setP(-1);
         rbtreeInsert(leftENode);
         rbtreeInsert(rightENode);
-        idCounter++;
+        intervals.add(new Interval(a,b,idCounter));
+        rbTree.size += 2; // Updates size after insertion.
     }
 
     //Insert method to add new nodes to the rbtree based on the rbtree properties and the node/endpoint's key
     public void rbtreeInsert(Node n){
         n.setColor(0);
+        int newHeight = 0;
         //if the tree is empty set the first node to be the root with the parent being the nil node
         if(rbTree.root == null){
             n.setColor(1);
@@ -46,11 +51,13 @@ public class Intervals {
             n.setLeft(rbTree.nil);
         }
         else{
+            newHeight++;
             Node cur = rbTree.root;
             while(cur != null){                     //while loop condition is really not necessary.
                 if(n.getKey() < cur.getKey()){
                     if(cur.getLeft() != rbTree.nil){
                         cur = cur.getLeft();
+                        newHeight++;
                     }
                     else{
                         cur.setLeft(n);
@@ -63,6 +70,7 @@ public class Intervals {
                 else{
                     if(cur.getRight() != rbTree.nil){
                         cur = cur.getRight();
+                        newHeight++;
                     }
                     else{
                         cur.setRight(n);
@@ -74,14 +82,13 @@ public class Intervals {
 
                 }
             }
-            rbTree.height++;
             rbTreeInsertFix(n);
-
-
-
         }
 
+        if(newHeight > rbTree.height)
+            rbTree.height = newHeight;
 
+        System.out.println(rbTree.height + "," + n.getKey());
 
     }
     //Insert fix based on the example code given in Section A's lecture slides
@@ -94,6 +101,9 @@ public class Intervals {
                    y.setColor(1);             //Case 1
                    x.getParent().getParent().setColor(0); //Case 1
                    x = x.getParent().getParent(); //Case 1
+                   //TODO: Implement Maxval here,
+                   updateVal_Case1();
+                   updateMax_Case1();
                }
                else{
                    if(x == x.getParent().getRight()){// case 2
@@ -103,6 +113,9 @@ public class Intervals {
                    x.getParent().setColor(1);        //Case 3
                    x.getParent().getParent().setColor(0); //Case 3
                    rightRotate(x.getParent().getParent()); //Case 3
+                   //TODO: Implement Maxval here,
+                   updateVal_Case2();
+                   updateMax_Case2();
                }
             }
             else{
@@ -121,11 +134,32 @@ public class Intervals {
                     x.getParent().setColor(1);          //Case 3
                     x.getParent().getParent().setColor(0); //Case 3
                     leftRotate(x.getParent().getParent()); //Case 3
+                    //TODO: Implement Maxval here,
+                    updateVal_Case3();
+                    updateMax_Case3();
                 }
 
             }
         }
         rbTree.root.setColor(1);
+    }
+
+    private void updateMax_Case1() {
+    }
+
+    private void updateVal_Case1() {
+    }
+
+    private void updateVal_Case2() {
+    }
+
+    private void updateMax_Case2() {
+    }
+
+    private void updateMax_Case3() {
+    }
+
+    private void updateVal_Case3() {
     }
 
     public void leftRotate(Node x){
@@ -237,14 +271,14 @@ public class Intervals {
      * Interval class used to keep record of each interval
      */
     public class Interval{
-        private int intervalID;
-        private Endpoint left;
-        private Endpoint right;
+        public int intervalID;
+        public Endpoint left;
+        public Endpoint right;
 
         Interval(int a, int b, int count) {
             left = new Endpoint(a);
             right = new Endpoint(b);
-            intervalID = count;
+            intervalID = count++;
         }
 
         public int getIntervalID() {

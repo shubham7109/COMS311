@@ -2,12 +2,22 @@ public class Test {
 
     public static void main(String[] args) {
         Intervals test = new Intervals();
-        test.intervalInsert(2,3);
-//        test.intervalInsert(1,3);
-//        test.intervalInsert(4,7);
+        System.out.println(test.getRBTree().nil);
+//        test.intervalInsert(0,4);
+//        test.intervalInsert(1,6);
+//        test.intervalInsert(3,9);
+//        test.intervalInsert(7,11);
+
+        test.intervalInsert(0,4);
+        test.intervalInsert(1,6);
+        test.intervalInsert(3,9);
+        test.intervalInsert(7,11);
+        test.intervalInsert(7,11);
         test.printRBTree(test.getRBTree().root);
-        System.out.println(test.getRBTree().root.getKey());
-        System.out.println(test.getRBTree().root.getRight().getKey());
+
+        System.out.println(test.getRBTree().height);
+        System.out.println(test.getRBTree().size);
+        System.out.println(test.getRBTree().nil);
     }
 
 }
