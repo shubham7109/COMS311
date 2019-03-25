@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 /**
  * The Intervals class represents a collection of intervals
+ * https://www.cs.usfca.edu/~galles/visualization/RedBlack.html
  */
 public class Intervals {
 
