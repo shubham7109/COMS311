@@ -76,11 +76,10 @@ public class Node {
      */
     public int getVal() {
         if(isNodeNil){
-            //This node is a T.nil node
+            //This node is a T.nil node so return 0 as the value
             return 0;
         } else{
-            //From the formula in the assignment description
-            return getLeft().getVal() + getP() + getRight().getVal();
+            return val;
         }
     }
 
