@@ -46,6 +46,59 @@ public class JUnitTests {
         Assert.assertEquals(test.getRBTree().root.getRight().getRight().getRight().getKey(),7);
         Assert.assertEquals(test.getRBTree().root.getRight().getRight().getRight().getColor(),COLOR_RED);
 
+        test = new Intervals();
+        test.intervalInsert(0,4);
+        Assert.assertEquals(test.getRBTree().root.getKey(),0);
+        Assert.assertEquals(test.getRBTree().root.getColor(),COLOR_BLACK);
+        Assert.assertEquals(test.getRBTree().root.getRight().getKey(),4);
+        Assert.assertEquals(test.getRBTree().root.getRight().getColor(),COLOR_RED);
+
+        test.intervalInsert(1,6);
+        Assert.assertEquals(test.getRBTree().root.getKey(),1);
+        Assert.assertEquals(test.getRBTree().root.getColor(),COLOR_BLACK);
+        Assert.assertEquals(test.getRBTree().root.getRight().getKey(),4);
+        Assert.assertEquals(test.getRBTree().root.getRight().getColor(),COLOR_BLACK);
+        Assert.assertEquals(test.getRBTree().root.getLeft().getKey(),0);
+        Assert.assertEquals(test.getRBTree().root.getLeft().getColor(),COLOR_BLACK);
+        Assert.assertEquals(test.getRBTree().root.getRight().getRight().getKey(),6);
+        Assert.assertEquals(test.getRBTree().root.getRight().getRight().getColor(),COLOR_RED);
+
+        test.intervalInsert(7,11);
+        Assert.assertEquals(test.getRBTree().root.getKey(),1);
+        Assert.assertEquals(test.getRBTree().root.getColor(),COLOR_BLACK);
+        Assert.assertEquals(test.getRBTree().root.getRight().getKey(),6);
+        Assert.assertEquals(test.getRBTree().root.getRight().getColor(),COLOR_RED);
+        Assert.assertEquals(test.getRBTree().root.getLeft().getKey(),0);
+        Assert.assertEquals(test.getRBTree().root.getLeft().getColor(),COLOR_BLACK);
+        Assert.assertEquals(test.getRBTree().root.getRight().getRight().getKey(),7);
+        Assert.assertEquals(test.getRBTree().root.getRight().getRight().getColor(),COLOR_BLACK);
+        Assert.assertEquals(test.getRBTree().root.getRight().getLeft().getKey(),4);
+        Assert.assertEquals(test.getRBTree().root.getRight().getLeft().getColor(),COLOR_BLACK);
+        Assert.assertEquals(test.getRBTree().root.getRight().getRight().getRight().getKey(),11);
+        Assert.assertEquals(test.getRBTree().root.getRight().getRight().getRight().getColor(),COLOR_RED);
+
+        test.intervalInsert(3,9);
+        Assert.assertEquals(test.getRBTree().root.getKey(),1);
+        Assert.assertEquals(test.getRBTree().root.getColor(),COLOR_BLACK);
+        Assert.assertEquals(test.getRBTree().root.getRight().getKey(),6);
+        Assert.assertEquals(test.getRBTree().root.getRight().getColor(),COLOR_RED);
+        Assert.assertEquals(test.getRBTree().root.getLeft().getKey(),0);
+        Assert.assertEquals(test.getRBTree().root.getLeft().getColor(),COLOR_BLACK);
+        Assert.assertEquals(test.getRBTree().root.getRight().getRight().getKey(),9);
+        Assert.assertEquals(test.getRBTree().root.getRight().getRight().getColor(),COLOR_BLACK);
+        Assert.assertEquals(test.getRBTree().root.getRight().getLeft().getKey(),4);
+        Assert.assertEquals(test.getRBTree().root.getRight().getLeft().getColor(),COLOR_BLACK);
+        Assert.assertEquals(test.getRBTree().root.getRight().getLeft().getLeft().getKey(),3);
+        Assert.assertEquals(test.getRBTree().root.getRight().getLeft().getLeft().getColor(),COLOR_RED);
+        Assert.assertEquals(test.getRBTree().root.getRight().getRight().getRight().getKey(),11);
+        Assert.assertEquals(test.getRBTree().root.getRight().getRight().getRight().getColor(),COLOR_RED);
+        Assert.assertEquals(test.getRBTree().root.getRight().getRight().getLeft().getKey(),7);
+        Assert.assertEquals(test.getRBTree().root.getRight().getRight().getLeft().getColor(),COLOR_RED);
+
+        test.printRBTree(test.getRBTree().root);
+
+
+
     }
 
     @Test
@@ -57,7 +110,8 @@ public class JUnitTests {
         test.intervalInsert(3,9);
         test.intervalInsert(7,11);
 
-        Assert.assertEquals(test.getRBTree().root.getVal(),0);
+        test.printRBTree(test.getRBTree().root);
+
         Assert.assertEquals(test.getRBTree().root.getLeft().getVal(),3);
         Assert.assertEquals(test.getRBTree().root.getLeft().getLeft().getVal(),1);
         Assert.assertEquals(test.getRBTree().root.getLeft().getRight().getVal(),1);
@@ -65,6 +119,7 @@ public class JUnitTests {
         Assert.assertEquals(test.getRBTree().root.getRight().getLeft().getVal(),-1);
         Assert.assertEquals(test.getRBTree().root.getRight().getRight().getVal(),-2);
         Assert.assertEquals(test.getRBTree().root.getRight().getRight().getRight().getVal(),-1);
+        Assert.assertEquals(test.getRBTree().root.getVal(),0);
     }
     
     @Test
@@ -133,17 +188,17 @@ public class JUnitTests {
     	Assert.assertEquals(0,test.getRBTree().root.getRight().getRight().getRight().getMaxVal());
         
         test.intervalInsert(3,9);
-        
-        Assert.assertEquals(2,test.getRBTree().root.getMaxVal());
-    	Assert.assertEquals(1,test.getRBTree().root.getLeft().getMaxVal());
-    	Assert.assertEquals(0,test.getRBTree().root.getRight().getMaxVal());
-    	Assert.assertEquals(0,test.getRBTree().root.getRight().getLeft().getMaxVal());
-    	Assert.assertEquals(1,test.getRBTree().root.getRight().getRight().getMaxVal());
-    	Assert.assertEquals(1,test.getRBTree().root.getRight().getLeft().getLeft().getMaxVal());
-    	Assert.assertEquals(0,test.getRBTree().root.getRight().getRight().getRight().getMaxVal());
-    	Assert.assertEquals(1,test.getRBTree().root.getRight().getRight().getLeft().getMaxVal());
-        
+
+        test.printRBTree(test.getRBTree().root);
+
         Assert.assertEquals(3,test.getRBTree().root.getMaxVal());
+    	Assert.assertEquals(1,test.getRBTree().root.getLeft().getMaxVal());//0
+    	Assert.assertEquals(1,test.getRBTree().root.getRight().getMaxVal());//6
+    	Assert.assertEquals(1,test.getRBTree().root.getRight().getLeft().getMaxVal());//4
+    	Assert.assertEquals(1,test.getRBTree().root.getRight().getRight().getMaxVal());//9
+    	Assert.assertEquals(1,test.getRBTree().root.getRight().getLeft().getLeft().getMaxVal());//3
+    	Assert.assertEquals(0,test.getRBTree().root.getRight().getRight().getRight().getMaxVal());//11
+    	Assert.assertEquals(1,test.getRBTree().root.getRight().getRight().getLeft().getMaxVal());//7
         
     }
 
