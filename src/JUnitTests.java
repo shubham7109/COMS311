@@ -68,9 +68,11 @@ public class JUnitTests {
     }
     
     @Test
-    public void TestMaxVal() {
+    public void TestMaxValAutomated() {
         Intervals test = new Intervals();
 
+        // Random automated testing for MaxVals
+        
         for(int j=0; j < 1000; j++) {
         	
         	ArrayList<Integer> ints = new ArrayList<Integer>();
@@ -103,9 +105,46 @@ public class JUnitTests {
     		Assert.assertEquals(3,test.getRBTree().root.getMaxVal());
     		test = new Intervals();
         }
+    }
+    
+    @Test
+    public void TestMaxValIndividually() {
+    	Intervals test = new Intervals();
+    	test.intervalInsert(0,4);
+    	
+    	Assert.assertEquals(1,test.getRBTree().root.getMaxVal());
+    	Assert.assertEquals(0,test.getRBTree().root.getLeft().getMaxVal());
+    	Assert.assertEquals(0,test.getRBTree().root.getRight().getMaxVal());
+    	
+        test.intervalInsert(1,6);
         
+    	Assert.assertEquals(2,test.getRBTree().root.getMaxVal());
+    	Assert.assertEquals(1,test.getRBTree().root.getLeft().getMaxVal());
+    	Assert.assertEquals(0,test.getRBTree().root.getRight().getMaxVal());
+    	Assert.assertEquals(0,test.getRBTree().root.getRight().getRight().getMaxVal());
         
-
+        test.intervalInsert(7,11);
+        
+        Assert.assertEquals(2,test.getRBTree().root.getMaxVal());
+    	Assert.assertEquals(1,test.getRBTree().root.getLeft().getMaxVal());
+    	Assert.assertEquals(0,test.getRBTree().root.getRight().getMaxVal());
+    	Assert.assertEquals(0,test.getRBTree().root.getRight().getLeft().getMaxVal());
+    	Assert.assertEquals(1,test.getRBTree().root.getRight().getRight().getMaxVal());
+    	Assert.assertEquals(0,test.getRBTree().root.getRight().getRight().getRight().getMaxVal());
+        
+        test.intervalInsert(3,9);
+        
+        Assert.assertEquals(2,test.getRBTree().root.getMaxVal());
+    	Assert.assertEquals(1,test.getRBTree().root.getLeft().getMaxVal());
+    	Assert.assertEquals(0,test.getRBTree().root.getRight().getMaxVal());
+    	Assert.assertEquals(0,test.getRBTree().root.getRight().getLeft().getMaxVal());
+    	Assert.assertEquals(1,test.getRBTree().root.getRight().getRight().getMaxVal());
+    	Assert.assertEquals(1,test.getRBTree().root.getRight().getLeft().getLeft().getMaxVal());
+    	Assert.assertEquals(0,test.getRBTree().root.getRight().getRight().getRight().getMaxVal());
+    	Assert.assertEquals(1,test.getRBTree().root.getRight().getRight().getLeft().getMaxVal());
+        
+        Assert.assertEquals(3,test.getRBTree().root.getMaxVal());
+        
     }
 
     private void insertIntervals1(Intervals intervals) {
