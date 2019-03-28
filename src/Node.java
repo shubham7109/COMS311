@@ -4,7 +4,6 @@ public class Node {
     private Node parent;
     private Node left;
     private Node right;
-    private int key;
     private int val;
     private int P;
     private int maxVal;
@@ -87,20 +86,6 @@ public class Node {
      * @return Returns the maxval of the node
      */
     public int getMaxVal() {
-        //Using the formula in the assignment description
-        int case1,case2,case3;
-        case1 = getLeft().getMaxVal();
-        case2 = getLeft().getVal();
-        case3 = getLeft().getVal() + P + getRight().getMaxVal();
-
-        maxVal = Math.max(case1,case2);
-        if(maxVal>case3){
-            maxVal = Math.max(case1,case3);
-        }
-        else{
-            maxVal = Math.max(case2,case3);
-        }
-
         return maxVal;
     }
 
@@ -147,10 +132,6 @@ public class Node {
         else
             eMax= getRight().getEndpoint();
         return eMax;
-    }
-
-    public void setKey(int key) {
-        this.key = key;
     }
 
     public void setVal(int val) {

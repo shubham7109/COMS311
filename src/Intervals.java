@@ -35,6 +35,7 @@ public class Intervals {
          rightENode.setP(-1);
          rbtreeInsert(leftENode);
          rbtreeInsert(rightENode);
+         rbTree.root.setMaxVal(maxNum(rbTree.root));
          intervals.add(new Interval(a,b,idCounter));
          //rbTree.root.setVal(rbTree.root.getLeft().getVal() + rbTree.root.getP() + rbTree.root.getRight().getVal());
          rbTree.size += 2; // Updates size after insertion.
@@ -61,6 +62,7 @@ public class Intervals {
                     if(cur.getLeft() != rbTree.nil){
                         cur = cur.getLeft();
                         cur.setVal(cur.getVal()+n.getP());
+                        cur.setMaxVal(maxNum(cur));
                         newHeight++;
                     }
                     else{
@@ -75,6 +77,7 @@ public class Intervals {
                     if(cur.getRight() != rbTree.nil){
                         cur = cur.getRight();
                         cur.setVal(cur.getVal()+n.getP());
+                        cur.setMaxVal(maxNum(cur));
                         newHeight++;
                     }
                     else{
@@ -88,6 +91,7 @@ public class Intervals {
                 }
             }
             n.setVal(n.getP());
+            n.setMaxVal(maxNum(n));
             newHeight = rbTreeInsertFix(n, newHeight);
         }
 
@@ -95,7 +99,7 @@ public class Intervals {
         if(newHeight > rbTree.height)
             rbTree.height = newHeight;
 
-        System.out.println(rbTree.height + "," + n.getKey());
+        //System.out.println(rbTree.height + "," + n.getKey());
 
     }
     //Insert fix based on the example code given in Section A's lecture slides
@@ -151,24 +155,6 @@ public class Intervals {
         return height;
     }
 
-//    private void updateMax_Case1() {
-//    }
-//
-//    private void updateVal_Case1() {
-//    }
-//
-//    private void updateVal_Case2() {
-//    }
-//
-//    private void updateMax_Case2() {
-//    }
-//
-//    private void updateMax_Case3() {
-//    }
-//
-//    private void updateVal_Case3() {
-//    }
-
     public void leftRotate(Node x){
         Node y = x.getRight();
         x.setRight(y.getLeft());
@@ -188,7 +174,9 @@ public class Intervals {
         y.setLeft(x);
         x.setParent(y);
         y.setVal(x.getVal());
+        y.setMaxVal(x.getMaxVal());
         x.setVal(x.getLeft().getVal() + x.getP() + x.getRight().getVal());
+        x.setMaxVal(maxNum(x));
 
     }
     public void rightRotate(Node x){
@@ -210,7 +198,9 @@ public class Intervals {
         y.setRight(x);
         x.setParent(y);
         y.setVal(x.getVal());
+        y.setMaxVal(x.getMaxVal());
         x.setVal(x.getLeft().getVal() + x.getP() + x.getRight().getVal());
+        x.setMaxVal(maxNum(x));
     }
 
     /**
@@ -240,42 +230,52 @@ public class Intervals {
     public void printRBTree(Node n) {
         if(n.getLeft() == rbTree.nil && n.getRight() == rbTree.nil){
             if(n == rbTree.root){
-                System.out.println("(" + n.getKey()+ ","  + n.getP() +  "," + n.getVal() + "," + n.getColor() + "," + "nil," + "nil" + "," + "nil" + ")");
+                System.out.println("(Key:" + n.getKey()+ ",P:"  + n.getP() +  ",Val:" + n.getVal() + ",MaxVal:"+ n.getMaxVal() + ",Color:" + n.getColor() + "," + "nil," + "nil" + "," + "nil" + ")");
             }
             else{
-                System.out.println("(" + n.getKey() + "," + n.getP() +"," + n.getVal() + "," + n.getColor() + "," + n.getParent().getKey() + "," + "nil" + "," + "nil" + ")");
+                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() +",Val:" + n.getVal() + ",MaxVal:" + n.getMaxVal() + ",Color:" + n.getColor() + "," + n.getParent().getKey() + "," + "nil" + "," + "nil" + ")");
             }
 
         }
         else if(n.getLeft() == rbTree.nil && n.getRight() != rbTree.nil){
             if(n == rbTree.root){
-                System.out.println("(" + n.getKey()  + n.getP() + "," + n.getVal() +  "," + n.getColor() + "," + "nil," + "nil" + "," + n.getRight().getKey() + ")");
+                System.out.println("(Key:" + n.getKey()  + ",P:" + n.getP() + ",Val:" + n.getVal() +  ",MaxVal:" + n.getMaxVal() + ",Color:" + n.getColor() + "," + "nil," + "nil" + "," + n.getRight().getKey() + ")");
             }
             else{
-                System.out.println("(" + n.getKey() + ","  + n.getP() +","+ n.getVal()  + "," + n.getColor() + "," + n.getParent().getKey() + "," + "nil" + "," + n.getRight().getKey() + ")");
+                System.out.println("(Key:" + n.getKey() + ",P:"  + n.getP() +",Val:"+ n.getVal()  + ",MaxVal:" + n.getMaxVal() + ",Color:" + n.getColor() + "," + n.getParent().getKey() + "," + "nil" + "," + n.getRight().getKey() + ")");
             }
             printRBTree(n.getRight());
         }
         else if(n.getLeft() != rbTree.nil && n.getRight() == rbTree.nil){
             if(n == rbTree.root){
-                System.out.println("(" + n.getKey() + n.getP() + "," + n.getVal() + "," + n.getColor() + "," + "nil," + n.getLeft().getKey() + "," + "nil" + ")");
+                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() + ",Val:" + n.getVal() + ",MaxVal:" + n.getMaxVal() + ",Color:" + n.getColor() + "," + "nil," + n.getLeft().getKey() + "," + "nil" + ")");
             }
             else{
-                System.out.println("(" + n.getKey() + "," + n.getP() +"," +  n.getVal() + "," + n.getColor() + "," + n.getParent().getKey() + "," + n.getLeft().getKey() + "," + "nil" + ")");
+                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() +",Val:" +  n.getVal() + ",MaxVal:" + n.getMaxVal() + ",Color:" + n.getColor() + "," + n.getParent().getKey() + "," + n.getLeft().getKey() + "," + "nil" + ")");
             }
             printRBTree(n.getLeft());
         }
         else{
             if(n == rbTree.root){
-                System.out.println("(" + n.getKey() + ","+ n.getP() + "," + n.getVal() + "," + n.getColor() + "," + "nil," + n.getLeft().getKey() + "," + n.getRight().getKey() + ")");
+                System.out.println("(Key:" + n.getKey() + ",P:"+ n.getP() + ",Val:" + n.getVal() + ",MaxVal:" + n.getMaxVal() + ",Color:" + n.getColor() + "," + "nil," + n.getLeft().getKey() + "," + n.getRight().getKey() + ")");
             }
             else{
-                System.out.println("(" + n.getKey() + "," + n.getP() +"," + n.getVal() + "," + n.getColor() + "," + n.getParent().getKey() + "," + n.getLeft().getKey() + "," + n.getRight().getKey() + ")");
+                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() +",Val:" + n.getVal() + ",MaxVal:" + n.getMaxVal() + ",Color:" + n.getColor() + "," + n.getParent().getKey() + "," + n.getLeft().getKey() + "," + n.getRight().getKey() + ")");
             }
             printRBTree(n.getLeft());
             printRBTree(n.getRight());
         }
 
+    }
+    
+    private int maxNum(Node n) {
+    	//if(n.getKey() == 4)
+    		//System.out.println("Stop here");
+    	int x = n.getLeft().getMaxVal();
+    	int y = n.getLeft().getVal() + n.getP();
+    	int z = n.getLeft().getVal() + n.getP() + n.getRight().getMaxVal();
+    	return Math.max(x, Math.max(y, z));
+    	
     }
 
     /**
