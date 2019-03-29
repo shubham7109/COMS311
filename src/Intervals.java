@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * The Intervals class represents a collection of intervals
- * https://www.cs.usfca.edu/~galles/visualization/RedBlack.html
+ * @author Shubham Sharma & Carter Ronald
  */
 public class Intervals {
 
@@ -19,8 +18,8 @@ public class Intervals {
 
     /**
      * Handles the insertion of an interval
-     * @param a left interval
-     * @param b right interval
+     * @param a left endpoint value
+     * @param b right endpoint value
      */
      public void intervalInsert(int a, int b){
          Interval interval = new Interval(a,b,idCounter);
@@ -40,7 +39,11 @@ public class Intervals {
          rbTree.size += 2; // Updates size after insertion.
     }
 
-    //Insert method to add new nodes to the rbtree based on the rbtree properties and the node/endpoint's key
+    /**
+     * Insert method to add new nodes to the rbtree based
+     * on the rbtree properties and the node/endpoint's key
+     * @param n Node to be inserted to the tree
+     */
     public void rbtreeInsert(Node n){
         n.setColor(0);
         int newHeight = 0;
@@ -51,12 +54,11 @@ public class Intervals {
             n.setParent(rbTree.nil);
             n.setRight(rbTree.nil);
             n.setLeft(rbTree.nil);
-
         }
         else{
             newHeight++;
             Node cur = rbTree.root;
-            while(cur != null){                     //while loop condition is really not necessary.
+            while(true){
                 if(n.getKey() < cur.getKey()){
                     if(cur.getLeft() != rbTree.nil){
                         cur = cur.getLeft();
@@ -107,10 +109,15 @@ public class Intervals {
         if(newHeight > rbTree.height)
             rbTree.height = newHeight;
 
-        //System.out.println(rbTree.height + "," + n.getKey());
-
     }
-    //Insert fix based on the example code given in Section A's lecture slides
+
+    /**
+     * Insert fix based on the example code
+     * given in Section A's lecture slides
+     * @param x Latest node added
+     * @param height Current height of the tree based on the position of x
+     * @return Return new height of the tree based on the position of x
+     */
     public int rbTreeInsertFix(Node x, int height){
         while(x.getParent().getColor() == 0){
             if(x.getParent() == x.getParent().getParent().getLeft()){
@@ -155,7 +162,6 @@ public class Intervals {
 
 
                 }
-
             }
         }
 
@@ -163,6 +169,9 @@ public class Intervals {
         return height;
     }
 
+    /**
+     * Works based on the lecture notes
+     */
     public void leftRotate(Node x){
         Node y = x.getRight();
         x.setRight(y.getLeft());
@@ -188,6 +197,10 @@ public class Intervals {
         x.getParent().setMaxVal(maxNum(x.getParent()));
 
     }
+
+    /**
+     * Works based on the lecture notes
+     */
     public void rightRotate(Node x){
         Node y = x.getLeft();
         x.setLeft(y.getRight());
@@ -277,7 +290,10 @@ public class Intervals {
         }
 
     }
-    
+
+    /**
+     * Helper method to find the maxVal and the Emax values
+     */
     private int maxNum(Node n) {
         int x,y,z;
         try{

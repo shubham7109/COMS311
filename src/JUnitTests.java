@@ -4,6 +4,9 @@ import java.util.Random;
 import org.junit.Assert;
 import org.junit.Test;
 
+/**
+ * @author Shubham Sharma & Carter Ronald
+ */
 public class JUnitTests {
 
     private final int COLOR_RED = 0;
@@ -259,19 +262,16 @@ public class JUnitTests {
     public void PointIntervals(){
 
         Intervals test = new Intervals();
-
         test.intervalInsert(0,0);
         test.intervalInsert(0,0);
         test.intervalInsert(0,0);
-        test.intervalInsert(0,0);test.intervalInsert(0,0);
-        test.intervalInsert(0,0);test.intervalInsert(0,0);
-        test.intervalInsert(0,0);test.intervalInsert(0,0);
         test.intervalInsert(0,0);
 
 
 
         test.printRBTree(test.getRBTree().root);
         Assert.assertEquals(1,test.getRBTree().getRoot().getMaxVal());
+        Assert.assertEquals(3,test.getRBTree().getHeight());
 
     }
 

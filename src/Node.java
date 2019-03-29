@@ -1,4 +1,6 @@
-
+/**
+ * @author Shubham Sharma & Carter Ronald
+ */
 public class Node {
 
     private Node parent;

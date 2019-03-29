@@ -1,3 +1,6 @@
+/**
+ * @author Shubham Sharma & Carter Ronald
+ */
 public class RBTree {
 
     public Node root;
