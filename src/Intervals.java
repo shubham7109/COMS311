@@ -62,7 +62,7 @@ public class Intervals {
                     if(cur.getLeft() != rbTree.nil){
                         cur = cur.getLeft();
                         cur.setVal(cur.getVal()+n.getP());
-                        cur.setMaxVal(cur.getMaxVal() + Math.max(n.getP(),0));
+                        cur.setMaxVal(Math.max(cur.getRight().getMaxVal(),cur.getMaxVal() + n.getP()));
                         newHeight++;
                     }
                     else{
@@ -77,7 +77,7 @@ public class Intervals {
                     if(cur.getRight() != rbTree.nil){
                         cur = cur.getRight();
                         cur.setVal(cur.getVal()+n.getP());
-                        cur.setMaxVal(cur.getMaxVal()+ Math.max(n.getP(),0));
+                        cur.setMaxVal(Math.max(cur.getLeft().getMaxVal(),cur.getMaxVal() + n.getP()));
                         newHeight++;
                     }
                     else{
@@ -270,6 +270,10 @@ public class Intervals {
     
     private int maxNum(Node n) {
         int x,y,z;
+        if(n.getKey() == 7)
+        {
+            System.out.println("stop here");
+        }
         try{
             x = n.getLeft().getMaxVal();
         }catch (Exception e){
