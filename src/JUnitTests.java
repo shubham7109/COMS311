@@ -203,7 +203,7 @@ public class JUnitTests {
     	Assert.assertEquals(1,test.getRBTree().root.getRight().getLeft().getLeft().getMaxVal());//3
     	Assert.assertEquals(0,test.getRBTree().root.getRight().getRight().getRight().getMaxVal());//11
     	Assert.assertEquals(1,test.getRBTree().root.getRight().getRight().getLeft().getMaxVal());//7
-        
+
     }
 
     private void insertIntervals1(Intervals intervals) {
@@ -249,6 +249,77 @@ public class JUnitTests {
         test.intervalInsert(1,6);
         test.intervalInsert(3,9);
         test.intervalInsert(7,11);
-        Assert.assertEquals(test.getRBTree().root.geteMax(),test.getRBTree().root.getLeft().getRight().getEndpoint());//TODO
+
+        test.printRBTree(test.getRBTree().root);
+
+        Assert.assertEquals(test.getRBTree().root.getLeft().getEmax(),test.getRBTree().root.getLeft().getRight().getEndpoint());
     }
+
+    @Test
+    public void PointIntervals(){
+
+        Intervals test = new Intervals();
+
+        test.intervalInsert(0,0);
+        test.intervalInsert(0,0);
+        test.intervalInsert(0,0);
+        test.intervalInsert(0,0);test.intervalInsert(0,0);
+        test.intervalInsert(0,0);test.intervalInsert(0,0);
+        test.intervalInsert(0,0);test.intervalInsert(0,0);
+        test.intervalInsert(0,0);
+
+
+
+        test.printRBTree(test.getRBTree().root);
+        Assert.assertEquals(1,test.getRBTree().getRoot().getMaxVal());
+
+    }
+
+    @Test
+    public void MoreInrervalInsertion(){
+
+        Intervals test = new Intervals();
+
+        test.intervalInsert(3,9);
+        test.intervalInsert(3,9);
+        test.intervalInsert(3,9);
+        test.intervalInsert(3,9);
+        test.intervalInsert(3,9);
+        test.intervalInsert(3,9);
+        test.intervalInsert(3,9);
+        test.intervalInsert(3,9);
+        test.intervalInsert(3,9);
+
+        test.intervalInsert(-9,-3);
+        test.intervalInsert(-9,-3);
+        test.intervalInsert(-9,-3);
+        test.intervalInsert(-9,-3);
+        test.intervalInsert(-9,-3);
+        test.intervalInsert(-9,-3);
+
+
+        //test.printRBTree(test.getRBTree().getRoot());
+        Assert.assertEquals(9,test.getRBTree().getRoot().getMaxVal());
+
+
+        test = new Intervals();
+        Random rand  = new Random();
+
+        for(int i=0; i< 12 ; i++){
+            int num1 = -10 +rand.nextInt(20);
+            int num2 = -10 +rand.nextInt(20);
+
+            if(num1 >= num2){
+                test.intervalInsert(num2,num1);
+                System.out.println("("+num2 + "," + num1 + ")");
+            }else{
+                test.intervalInsert(num1,num2);
+                System.out.println("("+num1 + "," + num2 + ")");
+            }
+        }
+
+        test.printRBTree(test.getRBTree().getRoot());
+
+    }
+
 }

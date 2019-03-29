@@ -9,7 +9,7 @@ public class Node {
     private int maxVal;
     private int color;
     private Endpoint endpoint;
-    private Endpoint eMax;
+    private Endpoint Emax;
     private boolean isNodeNil = false;
 
     public Node() {
@@ -126,12 +126,12 @@ public class Node {
         this.maxVal = maxVal;
     }
 
-    public Endpoint geteMax() {
-        return eMax;
+    public Endpoint getEmax() {
+        return Emax;
     }
 
-    public void seteMax(Endpoint eMax) {
-        this.eMax = eMax;
+    public void setEmax(Endpoint Emax) {
+        this.Emax = Emax;
     }
 
     public boolean isNodeNil() {

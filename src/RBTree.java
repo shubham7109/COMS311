@@ -14,8 +14,21 @@ public class RBTree {
        nil.setNodeNil(true);
        nil.setColor(1);
        nil.setEndpoint(null);
-
     }
 
+    public Node getRoot() {
+        return root;
+    }
 
+    public Node getNILNode() {
+        return nil;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public int getHeight() {
+        return height;
+    }
 }
