@@ -177,8 +177,12 @@ public class JUnitTests {
     	Assert.assertEquals(1,test.getRBTree().root.getLeft().getMaxVal());
     	Assert.assertEquals(0,test.getRBTree().root.getRight().getMaxVal());
     	Assert.assertEquals(0,test.getRBTree().root.getRight().getRight().getMaxVal());
+
+        test.printRBTree(test.getRBTree().root);System.out.println("\n\n");
         
         test.intervalInsert(7,11);
+
+        test.printRBTree(test.getRBTree().root);
         
         Assert.assertEquals(2,test.getRBTree().root.getMaxVal());
     	Assert.assertEquals(1,test.getRBTree().root.getLeft().getMaxVal());
@@ -235,5 +239,16 @@ public class JUnitTests {
         test.intervalInsert(3,9);
         test.intervalInsert(7,11);
         Assert.assertEquals(test.getRBTree().size,8);
+    }
+
+    @Test
+    public void TestEmax(){
+        Intervals test = new Intervals();
+
+        test.intervalInsert(0,4);
+        test.intervalInsert(1,6);
+        test.intervalInsert(3,9);
+        test.intervalInsert(7,11);
+        Assert.assertEquals(test.getRBTree().root.geteMax(),test.getRBTree().root.getLeft().getRight().getEndpoint());//TODO
     }
 }

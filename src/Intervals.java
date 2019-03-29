@@ -62,7 +62,7 @@ public class Intervals {
                     if(cur.getLeft() != rbTree.nil){
                         cur = cur.getLeft();
                         cur.setVal(cur.getVal()+n.getP());
-                        cur.setMaxVal(maxNum(cur));
+                        cur.setMaxVal(cur.getMaxVal() + Math.max(n.getP(),0));
                         newHeight++;
                     }
                     else{
@@ -77,7 +77,7 @@ public class Intervals {
                     if(cur.getRight() != rbTree.nil){
                         cur = cur.getRight();
                         cur.setVal(cur.getVal()+n.getP());
-                        cur.setMaxVal(maxNum(cur));
+                        cur.setMaxVal(cur.getMaxVal()+ Math.max(n.getP(),0));
                         newHeight++;
                     }
                     else{
@@ -230,37 +230,37 @@ public class Intervals {
     public void printRBTree(Node n) {
         if(n.getLeft() == rbTree.nil && n.getRight() == rbTree.nil){
             if(n == rbTree.root){
-                System.out.println("(Key:" + n.getKey()+ ",P:"  + n.getP() +  ",Val:" + n.getVal() + ",MaxVal:"+ n.getMaxVal() + ",Color:" + n.getColor() + "," + "nil," + "nil" + "," + "nil" + ")");
+                System.out.println("(Key:" + n.getKey()+ ",P:"  + n.getP() +  ",Val:" + n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "),Color:" + n.getColor() + "," + "nil," + "nil" + "," + "nil" + ")");
             }
             else{
-                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() +",Val:" + n.getVal() + ",MaxVal:" + n.getMaxVal() + ",Color:" + n.getColor() + "," + n.getParent().getKey() + "," + "nil" + "," + "nil" + ")");
+                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() +",Val:" + n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "),Color:"  + n.getColor() + "," + n.getParent().getKey() + "," + "nil" + "," + "nil" + ")");
             }
 
         }
         else if(n.getLeft() == rbTree.nil && n.getRight() != rbTree.nil){
             if(n == rbTree.root){
-                System.out.println("(Key:" + n.getKey()  + ",P:" + n.getP() + ",Val:" + n.getVal() +  ",MaxVal:" + n.getMaxVal() + ",Color:" + n.getColor() + "," + "nil," + "nil" + "," + n.getRight().getKey() + ")");
+                System.out.println("(Key:" + n.getKey()  + ",P:" + n.getP() + ",Val:" + n.getVal() +  ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "),Color:"  + n.getColor() + "," + "nil," + "nil" + "," + n.getRight().getKey() + ")");
             }
             else{
-                System.out.println("(Key:" + n.getKey() + ",P:"  + n.getP() +",Val:"+ n.getVal()  + ",MaxVal:" + n.getMaxVal() + ",Color:" + n.getColor() + "," + n.getParent().getKey() + "," + "nil" + "," + n.getRight().getKey() + ")");
+                System.out.println("(Key:" + n.getKey() + ",P:"  + n.getP() +",Val:"+ n.getVal()  + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "),Color:"  + n.getColor() + "," + n.getParent().getKey() + "," + "nil" + "," + n.getRight().getKey() + ")");
             }
             printRBTree(n.getRight());
         }
         else if(n.getLeft() != rbTree.nil && n.getRight() == rbTree.nil){
             if(n == rbTree.root){
-                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() + ",Val:" + n.getVal() + ",MaxVal:" + n.getMaxVal() + ",Color:" + n.getColor() + "," + "nil," + n.getLeft().getKey() + "," + "nil" + ")");
+                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() + ",Val:" + n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "),Color:"  + n.getColor() + "," + "nil," + n.getLeft().getKey() + "," + "nil" + ")");
             }
             else{
-                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() +",Val:" +  n.getVal() + ",MaxVal:" + n.getMaxVal() + ",Color:" + n.getColor() + "," + n.getParent().getKey() + "," + n.getLeft().getKey() + "," + "nil" + ")");
+                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() +",Val:" +  n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "),Color:"  + n.getColor() + "," + n.getParent().getKey() + "," + n.getLeft().getKey() + "," + "nil" + ")");
             }
             printRBTree(n.getLeft());
         }
         else{
             if(n == rbTree.root){
-                System.out.println("(Key:" + n.getKey() + ",P:"+ n.getP() + ",Val:" + n.getVal() + ",MaxVal:" + n.getMaxVal() + ",Color:" + n.getColor() + "," + "nil," + n.getLeft().getKey() + "," + n.getRight().getKey() + ")");
+                System.out.println("(Key:" + n.getKey() + ",P:"+ n.getP() + ",Val:" + n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "),Color:"  + n.getColor() + "," + "nil," + n.getLeft().getKey() + "," + n.getRight().getKey() + ")");
             }
             else{
-                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() +",Val:" + n.getVal() + ",MaxVal:" + n.getMaxVal() + ",Color:" + n.getColor() + "," + n.getParent().getKey() + "," + n.getLeft().getKey() + "," + n.getRight().getKey() + ")");
+                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() +",Val:" + n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "),Color:"  + n.getColor() + "," + n.getParent().getKey() + "," + n.getLeft().getKey() + "," + n.getRight().getKey() + ")");
             }
             printRBTree(n.getLeft());
             printRBTree(n.getRight());
@@ -269,11 +269,22 @@ public class Intervals {
     }
     
     private int maxNum(Node n) {
-    	//if(n.getKey() == 4)
-    		//System.out.println("Stop here");
-    	int x = n.getLeft().getMaxVal();
-    	int y = n.getLeft().getVal() + n.getP();
-    	int z = n.getLeft().getVal() + n.getP() + n.getRight().getMaxVal();
+        int x,y,z;
+        try{
+            x = n.getLeft().getMaxVal();
+        }catch (Exception e){
+            x = 0;
+        }
+        try{
+            y = n.getLeft().getVal() + n.getP();
+        }catch (Exception e){
+            y = 0;
+        }
+        try{
+            z = n.getLeft().getVal() + n.getP() + n.getRight().getMaxVal();
+        }catch (Exception e){
+            z = 0;
+        }
     	return Math.max(x, Math.max(y, z));
     	
     }

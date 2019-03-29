@@ -13,6 +13,7 @@ public class RBTree {
        nil = new Node();
        nil.setNodeNil(true);
        nil.setColor(1);
+       nil.setEndpoint(null);
 
     }
 

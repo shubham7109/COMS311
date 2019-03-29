@@ -86,7 +86,10 @@ public class Node {
      * @return Returns the maxval of the node
      */
     public int getMaxVal() {
-        return maxVal;
+        if(isNodeNil)
+            return 0;
+        else
+            return maxVal;
     }
 
     /**
@@ -113,25 +116,6 @@ public class Node {
 
     public void setNodeNil(boolean nodeNil) {
         isNodeNil = nodeNil;
-    }
-
-    /**
-     * @return Returns an Endpoint object that represents e_max
-     */
-    public Endpoint getMax() {
-        //TODO Not sure if this is the correct way to find the e_max
-        int case1,case2,case3;
-        case1 = getLeft().getMaxVal();
-        case2 = getLeft().getVal();
-        case3 = getLeft().getVal() + P + getRight().getMaxVal();
-
-        if(case1 > case2 && case1 > case3)
-            eMax = getLeft().getEndpoint();
-        else if(case2 > case3 && case2 > case1)
-            eMax= getLeft().getEndpoint();
-        else
-            eMax= getRight().getEndpoint();
-        return eMax;
     }
 
     public void setVal(int val) {
