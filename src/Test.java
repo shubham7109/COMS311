@@ -11,7 +11,6 @@ public class Test {
         test.intervalInsert(0,4);
         test.intervalInsert(1,6);
         test.intervalInsert(3,13);
-        test.printRBTree(test.getRBTree().root);
 
         System.out.println(test.getRBTree().height);
         System.out.println(test.getRBTree().size);

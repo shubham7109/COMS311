@@ -12,6 +12,7 @@ public class Intervals {
     public Intervals() {
 
         rbTree = new RBTree();
+        rbTree.root = rbTree.nil;
         intervals = new ArrayList<>();
         idCounter = 1;
     }
@@ -48,7 +49,7 @@ public class Intervals {
         n.setColor(0);
         int newHeight = 0;
         //if the tree is empty set the first node to be the root with the parent being the nil node
-        if(rbTree.root == null){
+        if(rbTree.root.isNodeNil()){
             n.setColor(1);
             rbTree.root = n;
             n.setParent(rbTree.nil);
@@ -224,6 +225,48 @@ public class Intervals {
         x.setVal(x.getLeft().getVal() + x.getP() + x.getRight().getVal());
         x.setMaxVal(maxNum(x));
         x.getParent().setMaxVal(maxNum(x.getParent()));
+    }
+
+    //Prints the rbTree, used for testing purposes only, can start printing from any node to see its subtrees, normally start at the root to see the whole tree.
+    public void printRBTree(Node n) {
+        if(n.getLeft() == rbTree.nil && n.getRight() == rbTree.nil){
+            if(n == rbTree.root){
+                System.out.println("(Key:" + n.getKey()+ ",P:"  + n.getP() +  ",Val:" + n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + ")," + "EMAX: " + ((n.getEmax() == null)? "NIL": n.getEmax().getValue()) + "," + "Color:" + n.getColor() + "," + "nil," + "nil" + "," + "nil" + ")");
+            }
+            else{
+                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() +",Val:" + n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + ")," + "EMAX: " + ((n.getEmax() == null)? "NIL": n.getEmax().getValue()) + "," + "Color:"  + n.getColor() + "," + n.getParent().getKey() + "," + "nil" + "," + "nil" + ")");
+            }
+
+        }
+        else if(n.getLeft() == rbTree.nil && n.getRight() != rbTree.nil){
+            if(n == rbTree.root){
+                System.out.println("(Key:" + n.getKey()  + ",P:" + n.getP() + ",Val:" + n.getVal() +  ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + ")," + "EMAX: " + ((n.getEmax() == null)? "NIL": n.getEmax().getValue()) + "," + "Color:"  + n.getColor() + "," + "nil," + "nil" + "," + n.getRight().getKey() + ")");
+            }
+            else{
+                System.out.println("(Key:" + n.getKey() + ",P:"  + n.getP() +",Val:"+ n.getVal()  + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + ")," + "EMAX: " + ((n.getEmax() == null)? "NIL": n.getEmax().getValue()) + "," + "Color:"  + n.getColor() + "," + n.getParent().getKey() + "," + "nil" + "," + n.getRight().getKey() + ")");
+            }
+            printRBTree(n.getRight());
+        }
+        else if(n.getLeft() != rbTree.nil && n.getRight() == rbTree.nil){
+            if(n == rbTree.root){
+                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() + ",Val:" + n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + ")," + "EMAX: " + ((n.getEmax() == null)? "NIL": n.getEmax().getValue()) + "," + "Color:"  + n.getColor() + "," + "nil," + n.getLeft().getKey() + "," + "nil" + ")");
+            }
+            else{
+                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() +",Val:" +  n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "), " + "EMAX: " + ((n.getEmax() == null)? "NIL": n.getEmax().getValue()) + "," + "Color:"  + n.getColor() + "," + n.getParent().getKey() + "," + n.getLeft().getKey() + "," + "nil" + ")");
+            }
+            printRBTree(n.getLeft());
+        }
+        else{
+            if(n == rbTree.root){
+                System.out.println("(Key:" + n.getKey() + ",P:"+ n.getP() + ",Val:" + n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + ")," + "EMAX: " + ((n.getEmax() == null)? "NIL": n.getEmax().getValue()) + "," + "Color:"  + n.getColor() + "," + "nil," + n.getLeft().getKey() + "," + n.getRight().getKey() + ")");
+            }
+            else{
+                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() +",Val:" + n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + ")" + "," + "EMAX: " + ((n.getEmax() == null)? "NIL": n.getEmax().getValue()) + "," + "Color:"  + n.getColor() + "," + n.getParent().getKey() + "," + n.getLeft().getKey() + "," + n.getRight().getKey() + ")");
+            }
+            printRBTree(n.getLeft());
+            printRBTree(n.getRight());
+        }
+
     }
 
     /**

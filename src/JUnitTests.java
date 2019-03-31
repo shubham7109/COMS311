@@ -4,6 +4,8 @@ import java.util.Random;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertEquals;
+
 /**
  * @author Shubham Sharma & Carter Ronald
  */
@@ -98,7 +100,6 @@ public class JUnitTests {
         Assert.assertEquals(test.getRBTree().root.getRight().getRight().getLeft().getKey(),7);
         Assert.assertEquals(test.getRBTree().root.getRight().getRight().getLeft().getColor(),COLOR_RED);
 
-        test.printRBTree(test.getRBTree().root);
 
 
 
@@ -113,7 +114,7 @@ public class JUnitTests {
         test.intervalInsert(3,9);
         test.intervalInsert(7,11);
 
-        test.printRBTree(test.getRBTree().root);
+         
 
         Assert.assertEquals(test.getRBTree().root.getLeft().getVal(),3);
         Assert.assertEquals(test.getRBTree().root.getLeft().getLeft().getVal(),1);
@@ -181,11 +182,11 @@ public class JUnitTests {
     	Assert.assertEquals(0,test.getRBTree().root.getRight().getMaxVal());
     	Assert.assertEquals(0,test.getRBTree().root.getRight().getRight().getMaxVal());
 
-        test.printRBTree(test.getRBTree().root);System.out.println("\n\n");
+         System.out.println("\n\n");
         
         test.intervalInsert(7,11);
 
-        test.printRBTree(test.getRBTree().root);
+         
         
         Assert.assertEquals(2,test.getRBTree().root.getMaxVal());
     	Assert.assertEquals(1,test.getRBTree().root.getLeft().getMaxVal());
@@ -196,7 +197,7 @@ public class JUnitTests {
         
         test.intervalInsert(3,9);
 
-        test.printRBTree(test.getRBTree().root);
+         
 
         Assert.assertEquals(3,test.getRBTree().root.getMaxVal());
     	Assert.assertEquals(1,test.getRBTree().root.getLeft().getMaxVal());//0
@@ -253,9 +254,34 @@ public class JUnitTests {
         test.intervalInsert(3,9);
         test.intervalInsert(7,11);
 
-        test.printRBTree(test.getRBTree().root);
+         
 
         Assert.assertEquals(test.getRBTree().root.getLeft().getEmax(),test.getRBTree().root.getLeft().getRight().getEndpoint());
+
+        Intervals i = new Intervals();
+
+        i.intervalInsert(4, 5);
+        i.intervalInsert(0, 5);
+        i.intervalInsert(5, 7);
+
+        i.printRBTree(i.getRBTree().getRoot());
+
+        assertEquals(i.findPOM(), 4);
+    }
+
+    @Test
+    public void testZeroNodeTree() {
+        Intervals test = new Intervals();
+
+        assertEquals(0,test.getRBTree().getHeight());
+        assertEquals(0,test.getRBTree().getSize());
+        assertEquals(0,test.getRBTree().getRoot().getMaxVal());
+    }
+
+    @Test
+    public void testGetValue() {
+        Endpoint endpoint = new Endpoint(4);
+        assertEquals(4, endpoint.getValue());
     }
 
     @Test
@@ -269,7 +295,7 @@ public class JUnitTests {
 
 
 
-        test.printRBTree(test.getRBTree().root);
+         
         Assert.assertEquals(1,test.getRBTree().getRoot().getMaxVal());
         Assert.assertEquals(3,test.getRBTree().getHeight());
 
@@ -317,8 +343,6 @@ public class JUnitTests {
                 System.out.println("("+num1 + "," + num2 + ")");
             }
         }
-
-        test.printRBTree(test.getRBTree().getRoot());
 
     }
 
