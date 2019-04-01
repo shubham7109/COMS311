@@ -12,8 +12,8 @@ public class RBTree {
     public RBTree() {
        size = 0;
        height = 0;
-       root = null;
        nil = new Node();
+       root = nil;
        nil.setNodeNil(true);
        nil.setColor(1);
        nil.setEndpoint(null);
