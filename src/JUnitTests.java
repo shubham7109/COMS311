@@ -288,16 +288,12 @@ public class JUnitTests {
     public void PointIntervals(){
 
         Intervals test = new Intervals();
-        test.intervalInsert(0,0);
-        test.intervalInsert(0,0);
-        test.intervalInsert(0,0);
-        test.intervalInsert(0,0);
+        test.intervalInsert(1,2);
+        test.intervalInsert(3,4);
 
 
-
-         
+        test.printRBTree(test.getRBTree().getRoot());
         Assert.assertEquals(1,test.getRBTree().getRoot().getMaxVal());
-        Assert.assertEquals(3,test.getRBTree().getHeight());
 
     }
 
