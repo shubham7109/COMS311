@@ -4,6 +4,7 @@ public class CommunicationsMonitor {
 
     private boolean isCreateGraphCalled = false;
     private ArrayList<ComputerTripleInfo> tripleInfoArrayList;
+    private HashMap<Integer, List<ComputerNode>> computerMapping;
 
     public CommunicationsMonitor(){
         tripleInfoArrayList = new ArrayList<>();
@@ -15,15 +16,16 @@ public class CommunicationsMonitor {
         if(isCreateGraphCalled)
             return;
 
-        ComputerNode node1 = new ComputerNode(c1,timestamp);
-        ComputerNode node2 = new ComputerNode(c2,timestamp);
-        tripleInfoArrayList.add(new ComputerTripleInfo(node1,node2)); // Basically does (C1,C2,time)
+//         ComputerNode node1 = new ComputerNode(c1,timestamp);
+//         ComputerNode node2 = new ComputerNode(c2,timestamp);
+        tripleInfoArrayList.add(new ComputerTripleInfo(c1,c2,timestamp)); // Basically does (C1,C2,time)
 
     }
 
     //Should run in O(n + m log m)
     // where (n = number of nodes, m = number of triples)
     public void createGraph(){
+        computerMapping = new HashMap<Integer, List<ComputerNode>>();
         isCreateGraphCalled = true;
 
         // Step1:
@@ -37,6 +39,40 @@ public class CommunicationsMonitor {
             else
                 return 1;
         });
+        ComputerNode previousTimestamp1 = null;
+        ComputerNode previousTimestamp2 = null;
+        boolean createNode1 = true;
+        boolean createNode2 = true;
+        for(ComputerTripleInfo triple : tripleInforArrayList){
+            if(computerMapping.get(triple.getNode1())!=null){
+               for(ComputerNode neighbor: computerMapping.get(triple.getNode1().getOutNeighbors()){
+                   if(neighbor.getID()== triple.getNode1()){
+                       if(neighbor.getTimestamp() != triple.getTimestamp()){
+                           previousTimestamp1 = neighbor;
+                       }
+                       else{
+                           createNode1 = false;
+                       }
+                   }                           
+               }               
+            }           
+        }
+                   
+        for(ComputerTripleInfo triple : tripleInforArrayList){
+            if(computerMapping.get(triple.getNode2())!=null){
+               for(ComputerNode neighbor: computerMapping.get(triple.getNode2().getOutNeighbors()){
+                   if(neighbor.getID()== triple.getNode2()){
+                       if(neighbor.getTimestamp() != triple.getTimestamp()){
+                           previousTimestamp2 = neighbor;
+                       }
+                       else{
+                           createNode2 = false;
+                       }
+                   }                           
+               }               
+            }           
+        }           
+        
 
 
         // Step2:
@@ -50,36 +86,36 @@ public class CommunicationsMonitor {
     }
 
     public HashMap<Integer, List<ComputerNode>> getComputerMapping(){
-        return null;
+        return computerMapping;
     }
 
     public List<ComputerNode> getComputerMapping(int c){
-        return null;
+        return computerMapping.get(c);
     }
 
 
     // Custom class used to keep track of each computer interaction.
     private class ComputerTripleInfo{
 
-        ComputerNode node1;
-        ComputerNode node2;
+        int node1;
+        int node2;
         Integer timeStamp;
 
-        ComputerTripleInfo(ComputerNode node1, ComputerNode node2) {
+        ComputerTripleInfo(int node1, int node2, int timestamp) {
             this.node1 = node1;
             this.node2 = node2;
-            timeStamp = node1.getTimestamp();
+            this.timeStamp = timestamp
         }
 
-        public ComputerNode getNode1() {
+        public int getNode1() {
             return node1;
         }
 
-        public ComputerNode getNode2() {
+        public int getNode2() {
             return node2;
         }
 
-        public Integer getTimeStamp() {
+        public Integer getTimestamp() {
             return timeStamp;
         }
     }
