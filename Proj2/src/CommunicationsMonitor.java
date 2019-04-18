@@ -51,7 +51,7 @@ public class CommunicationsMonitor {
             if(computerMapping.get(triple.getNode1())!=null){
                for(ComputerNode neighbor: computerMapping.get(triple.getNode1())){
                    if(neighbor.getID()== triple.getNode1()){
-                       if(neighbor.getTimestamp() != triple.getTimestamp()){
+                       if(neighbor.getTimestamp() != triple.getTimeStamp()){
                            previousTimestamp1 = neighbor;
                        }
                        else{
@@ -66,7 +66,7 @@ public class CommunicationsMonitor {
             if(computerMapping.get(triple.getNode2())!=null){
                for(ComputerNode neighbor: computerMapping.get(triple.getNode2())){
                    if(neighbor.getID()== triple.getNode2()){
-                       if(neighbor.getTimestamp() != triple.getTimestamp()){
+                       if(neighbor.getTimestamp() != triple.getTimeStamp()){
                            previousTimestamp2 = neighbor;
                        }
                        else{
@@ -79,18 +79,20 @@ public class CommunicationsMonitor {
             ComputerNode node2 = null;
             if(createNode1 == true){
                 node1 = new ComputerNode(triple.getNode1(), triple.getTimeStamp());
+                
                 if(previousTimestamp1!=null){
-                    previousTimestamp1.setOutNeighbors(node1);
+                    previousTimestamp1.addOutNeighbors(node1);
                 }
                 computerMapping.put(node1.getID(),node1.getOutNeighbors());
             }
             
             if(createNode2 == true){
                 node2 = new ComputerNode(triple.getNode2(), triple.getTimeStamp());
+
                 if(previousTimestamp2!=null){
-                    previousTimestamp2.setOutNeighbors(node2);
+                    previousTimestamp2.addOutNeighbors(node2);
                 }
-                computerMapping.put(node2.getID(), node2.getOutNeighbors);
+                computerMapping.put(node2.getID(), node2.getOutNeighbors());
             }
             
         }
@@ -101,38 +103,18 @@ public class CommunicationsMonitor {
             ComputerNode compNode1 = null;
             ComputerNode compNode2 = null;
             for(ComputerNode computerNode : getComputerMapping(node1)){
-                if(computerNode.getTimeStamp() == triple.getTimeStamp()){
+                if(computerNode.getTimestamp() == triple.getTimeStamp()){
                     compNode1 = computerNode;
                 }
             }
             for(ComputerNode computerNode : getComputerMapping(node2)){
-                if(computerNode.getTimeStamp() == triple.getTimeStamp()){
+                if(computerNode.getTimestamp() == triple.getTimeStamp()){
                     compNode2 = computerNode;
                 }
             }
             compNode1.addOutNeighbors(compNode2);
             compNode2.addOutNeighbors(compNode1);
         }
-            
-            
-            
-            
-        
-                
-                
-            
-            
-            
-        
-        
-      
-        
-
-
-        // Step2:
-        // Maintain a map where the keys are the computers and the associated values are lists.
-        // Initially, the list associated with each computer is empty.
-        //TODO
     }
 
     public List<ComputerNode> queryInfection(int c1, int c2, int x, int y){
@@ -158,7 +140,7 @@ public class CommunicationsMonitor {
         ComputerTripleInfo(int node1, int node2, int timestamp) {
             this.node1 = node1;
             this.node2 = node2;
-            this.timeStamp = timestamp
+            this.timeStamp = timestamp;
         }
 
         public int getNode1() {
@@ -173,7 +155,5 @@ public class CommunicationsMonitor {
             return timeStamp;
         }
     }
-
-
 
 }
