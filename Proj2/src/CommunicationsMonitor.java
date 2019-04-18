@@ -39,13 +39,17 @@ public class CommunicationsMonitor {
             else
                 return 1;
         });
+        
+        //Checks to see if the two nodes already exist in the graph. If they do it also keeps track of the last
+        //node's timestamp with the same id, i.e. the same computer.E.G if (C1, 4) and (C1, 12) exist and we add
+        //(C1,16) it will say this new node is not in the graph and will say we need to link it to (C1,12).
         ComputerNode previousTimestamp1 = null;
         ComputerNode previousTimestamp2 = null;
         boolean createNode1 = true;
         boolean createNode2 = true;
-        for(ComputerTripleInfo triple : tripleInforArrayList){
+        for(ComputerTripleInfo triple : tripleInfoArrayList){
             if(computerMapping.get(triple.getNode1())!=null){
-               for(ComputerNode neighbor: computerMapping.get(triple.getNode1().getOutNeighbors()){
+               for(ComputerNode neighbor: computerMapping.get(triple.getNode1())){
                    if(neighbor.getID()== triple.getNode1()){
                        if(neighbor.getTimestamp() != triple.getTimestamp()){
                            previousTimestamp1 = neighbor;
@@ -56,11 +60,11 @@ public class CommunicationsMonitor {
                    }                           
                }               
             }           
-        }
+        
                    
-        for(ComputerTripleInfo triple : tripleInforArrayList){
+        
             if(computerMapping.get(triple.getNode2())!=null){
-               for(ComputerNode neighbor: computerMapping.get(triple.getNode2().getOutNeighbors()){
+               for(ComputerNode neighbor: computerMapping.get(triple.getNode2())){
                    if(neighbor.getID()== triple.getNode2()){
                        if(neighbor.getTimestamp() != triple.getTimestamp()){
                            previousTimestamp2 = neighbor;
@@ -70,8 +74,58 @@ public class CommunicationsMonitor {
                        }
                    }                           
                }               
-            }           
-        }           
+            } 
+            ComputerNode node1 = null;
+            ComputerNode node2 = null;
+            if(createNode1 == true){
+                node1 = new ComputerNode(triple.getNode1(), triple.getTimeStamp());
+                if(previousTimestamp1!=null){
+                    previousTimestamp1.setOutNeighbors(node1);
+                }
+                computerMapping.put(node1.getID(),node1.getOutNeighbors());
+            }
+            
+            if(createNode2 == true){
+                node2 = new ComputerNode(triple.getNode2(), triple.getTimeStamp());
+                if(previousTimestamp2!=null){
+                    previousTimestamp2.setOutNeighbors(node2);
+                }
+                computerMapping.put(node2.getID(), node2.getOutNeighbors);
+            }
+            
+        }
+        
+        for(ComputerTripleInfo triple : tripleInfoArrayList){
+            int node1 = triple.getNode1();
+            int node2 = triple.getNode2();
+            ComputerNode compNode1 = null;
+            ComputerNode compNode2 = null;
+            for(ComputerNode computerNode : getComputerMapping(node1)){
+                if(computerNode.getTimeStamp() == triple.getTimeStamp()){
+                    compNode1 = computerNode;
+                }
+            }
+            for(ComputerNode computerNode : getComputerMapping(node2)){
+                if(computerNode.getTimeStamp() == triple.getTimeStamp()){
+                    compNode2 = computerNode;
+                }
+            }
+            compNode1.addOutNeighbors(compNode2);
+            compNode2.addOutNeighbors(compNode1);
+        }
+            
+            
+            
+            
+        
+                
+                
+            
+            
+            
+        
+        
+      
         
 
 
@@ -115,7 +169,7 @@ public class CommunicationsMonitor {
             return node2;
         }
 
-        public Integer getTimestamp() {
+        public Integer getTimeStamp() {
             return timeStamp;
         }
     }
