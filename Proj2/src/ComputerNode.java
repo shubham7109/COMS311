@@ -31,7 +31,7 @@ public class ComputerNode {
      * The computer node to which there is
      * outgoing edge from this ComputerNode object
      */
-    public void setOutNeighbors(ComputerNode computerNode){
+    public void addOutNeighbors(ComputerNode computerNode){
         computerNodeList.add(computerNode);
     }
 }
