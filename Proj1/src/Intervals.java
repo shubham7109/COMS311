@@ -272,13 +272,13 @@ public class Intervals {
 
         int max = Math.max(x, Math.max(y, z));
         if(max == x){
-            n.setEmax(n.getLeft().getEndpoint());
+            n.setEmax(n.getLeft().getEmax());
         }
         else if(max == y){
             n.setEmax(n.getEndpoint());
         }
         else{
-            n.setEmax(n.getRight().getEndpoint());
+            n.setEmax(n.getRight().getEmax());
         }
 
     	return max;
