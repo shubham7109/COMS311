@@ -31,23 +31,24 @@ public class CommunicationsMonitor {
         // Step1:
         // Sort the triples by nondecreasing timestamp
         // TODO Check if this is O(mlogm)
-        tripleInfoArrayList.sort((o1, o2) -> {
-            if (o1.getTimeStamp() < o2.getTimeStamp())
-                return -1;
+        tripleInfoArrayList.sort((ComputerTripleInfo o1, ComputerTripleInfo o2) -> {
+            if (o1.getTimeStamp() > o2.getTimeStamp())
+                return 1;
             else if (o1.getTimeStamp().equals(o2.getTimeStamp()))
                 return 0;
             else
-                return 1;
+                return -1;
         });
         
         //Checks to see if the two nodes already exist in the graph. If they do it also keeps track of the last
         //node's timestamp with the same id, i.e. the same computer.E.G if (C1, 4) and (C1, 12) exist and we add
         //(C1,16) it will say this new node is not in the graph and will say we need to link it to (C1,12).
-        ComputerNode previousTimestamp1 = null;
-        ComputerNode previousTimestamp2 = null;
-        boolean createNode1 = true;
-        boolean createNode2 = true;
+
         for(ComputerTripleInfo triple : tripleInfoArrayList){
+            ComputerNode previousTimestamp1 = null;
+            ComputerNode previousTimestamp2 = null;
+            boolean createNode1 = true;
+            boolean createNode2 = true;
             if(computerMapping.get(triple.getNode1())!=null){
                for(ComputerNode neighbor: computerMapping.get(triple.getNode1())){
                    if(neighbor.getID()== triple.getNode1()){
@@ -78,21 +79,30 @@ public class CommunicationsMonitor {
             ComputerNode node1 = null;
             ComputerNode node2 = null;
             if(createNode1 == true){
+                LinkedList<ComputerNode> hashList = new LinkedList<>();
                 node1 = new ComputerNode(triple.getNode1(), triple.getTimeStamp());
-                
+
                 if(previousTimestamp1!=null){
                     previousTimestamp1.addOutNeighbors(node1);
+                    computerMapping.get(previousTimestamp1.getID()).add(node1);
                 }
-                computerMapping.put(node1.getID(),node1.getOutNeighbors());
+                else {
+                    hashList.add(node1);
+                    computerMapping.put(node1.getID(), hashList);
+                }
             }
             
             if(createNode2 == true){
                 node2 = new ComputerNode(triple.getNode2(), triple.getTimeStamp());
-
+                LinkedList<ComputerNode> hashList = new LinkedList<>();
                 if(previousTimestamp2!=null){
                     previousTimestamp2.addOutNeighbors(node2);
+                    computerMapping.get(previousTimestamp2.getID()).add(node2);
                 }
-                computerMapping.put(node2.getID(), node2.getOutNeighbors());
+                else {
+                    hashList.add(node2);
+                    computerMapping.put(node2.getID(), hashList);
+                }
             }
             
         }
