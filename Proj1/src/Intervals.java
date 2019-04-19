@@ -55,6 +55,7 @@ public class Intervals {
             n.setParent(rbTree.nil);
             n.setRight(rbTree.nil);
             n.setLeft(rbTree.nil);
+            rbTree.height=1;
         }
         else{
             newHeight++;
@@ -103,7 +104,7 @@ public class Intervals {
                 cur.setMaxVal(maxNum(cur));
             }
 
-            newHeight = rbTreeInsertFix(n, newHeight);
+            newHeight = rbTreeInsertFix(n, newHeight)+1;
         }
 
 
