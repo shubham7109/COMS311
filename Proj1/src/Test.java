@@ -1,20 +1,35 @@
-/**
- * @author Shubham Sharma & Carter Ronald
- */
+import java.io.File;
+import java.util.Scanner;
+
 public class Test {
 
     public static void main(String[] args) {
-        Intervals test = new Intervals();
-        System.out.println(test.getRBTree().nil);
+        int POM = 0;
+        Intervals intervals = new Intervals();
 
-        test.intervalInsert(7,11);
-        test.intervalInsert(0,4);
-        test.intervalInsert(1,6);
-        test.intervalInsert(3,13);
+        try {
+            File file = new File("small_1.txt");
 
-        System.out.println(test.getRBTree().height);
-        System.out.println(test.getRBTree().size);
-        System.out.println(test.getRBTree().nil);
+            Scanner input = new Scanner(file);
+
+            input.nextLine();
+
+
+            while (input.hasNextLine()) {
+                intervals.intervalInsert(input.nextInt(),input.nextInt());
+            }
+            input.close();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        System.out.println(intervals.findPOM());
+        //System.out.println(POM);
+
+//        test.intervalInsert(7,11);
+//        test.intervalInsert(0,4);
+//        test.intervalInsert(1,6);
+//        test.intervalInsert(3,13);
     }
-
 }

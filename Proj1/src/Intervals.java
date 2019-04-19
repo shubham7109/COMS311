@@ -22,22 +22,22 @@ public class Intervals {
      * @param a left endpoint value
      * @param b right endpoint value
      */
-     public void intervalInsert(int a, int b){
-         Interval interval = new Interval(a,b,idCounter);
+    public void intervalInsert(int a, int b){
+        Interval interval = new Interval(a,b,idCounter);
 
-         interval.left = new Endpoint(a);
-         interval.right = new Endpoint(b);
-         Node leftENode = new Node();
-         Node rightENode = new Node();
-         leftENode.setEndpoint(interval.left);
-         leftENode.setP(+1);
-         rightENode.setEndpoint(interval.right);
-         rightENode.setP(-1);
-         rbtreeInsert(leftENode);
-         rbtreeInsert(rightENode);
-         rbTree.root.setMaxVal(maxNum(rbTree.root));
-         intervals.add(new Interval(a,b,idCounter));
-         rbTree.size += 2; // Updates size after insertion.
+        interval.left = new Endpoint(a);
+        interval.right = new Endpoint(b);
+        Node leftENode = new Node();
+        Node rightENode = new Node();
+        leftENode.setEndpoint(interval.left);
+        leftENode.setP(+1);
+        rightENode.setEndpoint(interval.right);
+        rightENode.setP(-1);
+        rbtreeInsert(leftENode);
+        rbtreeInsert(rightENode);
+        rbTree.root.setMaxVal(maxNum(rbTree.root));
+        intervals.add(new Interval(a,b,idCounter));
+        rbTree.size += 2; // Updates size after insertion.
     }
 
     /**
@@ -61,10 +61,41 @@ public class Intervals {
             newHeight++;
             Node cur = rbTree.root;
             while(true){
-                if(n.getKey() < cur.getKey()){
+
+                if(n.getKey() == cur.getKey()) {
+                    if (cur.getLeft() != rbTree.nil) {
+                        if (n.getP() > cur.getP()) {
+                            cur.setVal(cur.getVal() + n.getP());
+                            cur = cur.getLeft();
+                            newHeight++;
+                        } else {
+                            cur.setVal(cur.getVal() + n.getP());
+                            cur = cur.getRight();
+                            newHeight++;
+                        }
+                    }
+                    else{
+                        if (n.getP() > cur.getP()) {
+                            cur.setLeft(n);
+                            n.setParent(cur);
+                            n.setLeft(rbTree.nil);
+                            n.setRight(rbTree.nil);
+
+                            break;
+                        } else {
+                            cur.setRight(n);
+                            n.setParent(cur);
+                            n.setLeft(rbTree.nil);
+                            n.setRight(rbTree.nil);
+                            break;
+                        }
+                    }
+                }
+
+                else if(n.getKey() < cur.getKey()){
                     if(cur.getLeft() != rbTree.nil){
-                        cur = cur.getLeft();
                         cur.setVal(cur.getVal()+n.getP());
+                        cur = cur.getLeft();
                         newHeight++;
                     }
                     else{
@@ -77,9 +108,8 @@ public class Intervals {
                 }
                 else{
                     if(cur.getRight() != rbTree.nil){
-                        cur = cur.getRight();
                         cur.setVal(cur.getVal()+n.getP());
-                        cur.getParent().setMaxVal(maxNum(cur.getParent()));
+                        cur = cur.getRight();
                         newHeight++;
                     }
                     else{
@@ -87,7 +117,6 @@ public class Intervals {
                         n.setParent(cur);
                         n.setLeft(rbTree.nil);
                         n.setRight(rbTree.nil);
-                        n.getParent().setMaxVal(maxNum(n.getParent()));
                         break;
                     }
 
@@ -123,26 +152,26 @@ public class Intervals {
     public int rbTreeInsertFix(Node x, int height){
         while(x.getParent().getColor() == 0){
             if(x.getParent() == x.getParent().getParent().getLeft()){
-               Node y = x.getParent().getParent().getRight();
-               if(y.getColor() == 0){
-                   x.getParent().setColor(1); //Case 1
-                   y.setColor(1);             //Case 1
-                   x.getParent().getParent().setColor(0); //Case 1
-                   x = x.getParent().getParent(); //Case 1
+                Node y = x.getParent().getParent().getRight();
+                if(y.getColor() == 0){
+                    x.getParent().setColor(1); //Case 1
+                    y.setColor(1);             //Case 1
+                    x.getParent().getParent().setColor(0); //Case 1
+                    x = x.getParent().getParent(); //Case 1
 
 
-               }
-               else{
-                   if(x == x.getParent().getRight()){// case 2
-                       x = x.getParent();            //Case 2
-                       leftRotate(x);                //Case 2
-                   }
-                   x.getParent().setColor(1);        //Case 3
-                   x.getParent().getParent().setColor(0); //Case 3
-                   rightRotate(x.getParent().getParent()); //Case 3
-                   height--;
+                }
+                else{
+                    if(x == x.getParent().getRight()){// case 2
+                        x = x.getParent();            //Case 2
+                        leftRotate(x);                //Case 2
+                    }
+                    x.getParent().setColor(1);        //Case 3
+                    x.getParent().getParent().setColor(0); //Case 3
+                    rightRotate(x.getParent().getParent()); //Case 3
+                    height--;
 
-               }
+                }
             }
             else{
                 Node y = x.getParent().getParent().getLeft();
@@ -282,8 +311,8 @@ public class Intervals {
             n.setEmax(n.getRight().getEmax());
         }
 
-    	return max;
-    	
+        return max;
+
     }
 
     /**
@@ -313,4 +342,47 @@ public class Intervals {
         }
 
     }
+
+    //Prints the rbTree, used for testing purposes only, can start printing from any node to see its subtrees, normally start at the root to see the whole tree.
+    public void printRBTree(Node n) {
+        if(n.getLeft() == rbTree.nil && n.getRight() == rbTree.nil){
+            if(n == rbTree.root){
+                System.out.println("(Key:" + n.getKey()+ ",P:"  + n.getP() +  ",Val:" + n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "),Color:" + n.getColor() + "," + "nil," + "nil" + "," + "nil" + ")");
+            }
+            else{
+                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() +",Val:" + n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "),Color:"  + n.getColor() + "," + n.getParent().getKey() + "," + "nil" + "," + "nil" + ")");
+            }
+
+        }
+        else if(n.getLeft() == rbTree.nil && n.getRight() != rbTree.nil){
+            if(n == rbTree.root){
+                System.out.println("(Key:" + n.getKey()  + ",P:" + n.getP() + ",Val:" + n.getVal() +  ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "),Color:"  + n.getColor() + "," + "nil," + "nil" + "," + n.getRight().getKey() + ")");
+            }
+            else{
+                System.out.println("(Key:" + n.getKey() + ",P:"  + n.getP() +",Val:"+ n.getVal()  + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "),Color:"  + n.getColor() + "," + n.getParent().getKey() + "," + "nil" + "," + n.getRight().getKey() + ")");
+            }
+            printRBTree(n.getRight());
+        }
+        else if(n.getLeft() != rbTree.nil && n.getRight() == rbTree.nil){
+            if(n == rbTree.root){
+                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() + ",Val:" + n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "),Color:"  + n.getColor() + "," + "nil," + n.getLeft().getKey() + "," + "nil" + ")");
+            }
+            else{
+                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() +",Val:" +  n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "),Color:"  + n.getColor() + "," + n.getParent().getKey() + "," + n.getLeft().getKey() + "," + "nil" + ")");
+            }
+            printRBTree(n.getLeft());
+        }
+        else{
+            if(n == rbTree.root){
+                System.out.println("(Key:" + n.getKey() + ",P:"+ n.getP() + ",Val:" + n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "),Color:"  + n.getColor() + "," + "nil," + n.getLeft().getKey() + "," + n.getRight().getKey() + ")");
+            }
+            else{
+                System.out.println("(Key:" + n.getKey() + ",P:" + n.getP() +",Val:" + n.getVal() + ",MaxVal:("+ n.getMaxVal() + "," + maxNum(n) + "),Color:"  + n.getColor() + "," + n.getParent().getKey() + "," + n.getLeft().getKey() + "," + n.getRight().getKey() + ")");
+            }
+            printRBTree(n.getLeft());
+            printRBTree(n.getRight());
+        }
+
+    }
+
 }
