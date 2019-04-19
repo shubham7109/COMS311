@@ -8,15 +8,20 @@ public class Test {
         Intervals intervals = new Intervals();
 
         try {
-            File file = new File("small_1.txt");
+            //all small work
+            //all medium work
+            //all large work
+            File file = new File("large_5.txt");
 
             Scanner input = new Scanner(file);
 
             input.nextLine();
-
+            int i = 0;
 
             while (input.hasNextLine()) {
                 intervals.intervalInsert(input.nextInt(),input.nextInt());
+//                System.out.println(i);
+//                i++;
             }
             input.close();
 
@@ -25,6 +30,8 @@ public class Test {
         }
 
         System.out.println(intervals.findPOM());
+
+
         //System.out.println(POM);
 
 //        test.intervalInsert(7,11);

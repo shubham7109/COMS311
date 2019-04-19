@@ -63,25 +63,26 @@ public class Intervals {
             while(true){
 
                 if(n.getKey() == cur.getKey()) {
-                    if (cur.getLeft() != rbTree.nil) {
-                        if (n.getP() > cur.getP()) {
-                            cur.setVal(cur.getVal() + n.getP());
+                    if (n.getP() > cur.getP()) {
+                        if (cur.getLeft() != rbTree.nil) {
+
                             cur = cur.getLeft();
+                            cur.setVal(cur.getVal() + n.getP());
                             newHeight++;
                         } else {
-                            cur.setVal(cur.getVal() + n.getP());
-                            cur = cur.getRight();
-                            newHeight++;
-                        }
-                    }
-                    else{
-                        if (n.getP() > cur.getP()) {
                             cur.setLeft(n);
                             n.setParent(cur);
                             n.setLeft(rbTree.nil);
                             n.setRight(rbTree.nil);
-
                             break;
+                        }
+                    }
+                    else{
+                        if (cur.getRight() != rbTree.nil) {
+
+                            cur = cur.getRight();
+                            cur.setVal(cur.getVal() + n.getP());
+                            newHeight++;
                         } else {
                             cur.setRight(n);
                             n.setParent(cur);
@@ -94,8 +95,9 @@ public class Intervals {
 
                 else if(n.getKey() < cur.getKey()){
                     if(cur.getLeft() != rbTree.nil){
-                        cur.setVal(cur.getVal()+n.getP());
+
                         cur = cur.getLeft();
+                        cur.setVal(cur.getVal()+n.getP());
                         newHeight++;
                     }
                     else{
@@ -108,8 +110,9 @@ public class Intervals {
                 }
                 else{
                     if(cur.getRight() != rbTree.nil){
-                        cur.setVal(cur.getVal()+n.getP());
+
                         cur = cur.getRight();
+                        cur.setVal(cur.getVal()+n.getP());
                         newHeight++;
                     }
                     else{
