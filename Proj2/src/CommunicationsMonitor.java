@@ -199,7 +199,9 @@ public class CommunicationsMonitor {
 //        }
 
         computerNodes = computerMapping.get(c2);
-
+        if (computerNodes == null){
+            return null;
+        }
         for (ComputerNode node: computerNodes) {
             if(node.getTimestamp() >= y){
                 endNode = node;
@@ -212,36 +214,60 @@ public class CommunicationsMonitor {
         }
 
         // TODO Check that this is in 0(m) time
-        // BFS starts here
+        // DFS starts here
 
-        Queue<ComputerNode> queue = new LinkedList<>();
-        ArrayList<ComputerNode> explored = new ArrayList<>();
 
-        if(startingNode.equals(endNode)){
-            explored.add(startingNode);
-            return explored;
+        ArrayList<ComputerNode> path = new ArrayList<ComputerNode>();
+        ArrayList<ComputerNode> testDFS = new ArrayList<ComputerNode>();
+
+        DFSVisit_Path(startingNode);
+
+        if(endNode.getPred() == null){
+            return null;
+        }
+        else{
+            ComputerNode cur = endNode;
+
+            while(cur.getPred() != null){
+                path.add(cur);
+                cur = cur.getPred();
+            }
+            path.add(cur);
         }
 
+        path = ReverseList(path);
+        
+        return path;
 
-        queue.add(startingNode);
-        explored.add(startingNode);
 
-        while(!queue.isEmpty()){
-            ComputerNode current = queue.remove();
-            if(current.equals(endNode)) {
-                explored.add(current);
-                return explored;
+    }
+
+    public void DFSVisit_Path(ComputerNode u){//runs in O(n+m), according to piazza posts, instructor says m>=n so effectively O(m)
+
+        u.setColor(1);//set to grey
+
+        for(ComputerNode neighbor : u.getOutNeighbors()){
+            if(neighbor.getColor()==0){//if neighbor is white
+                neighbor.setPred(u);
+                DFSVisit_Path(neighbor);
             }
-            else{
-                if(current.getOutNeighbors().isEmpty())
-                    return null;
-                else
-                    queue.addAll(current.getOutNeighbors());
-            }
-            explored.add(current);
+            u.setColor(2);//once finished set to black
         }
 
-        return null;
+    }
+
+    public ArrayList<ComputerNode> ReverseList(ArrayList<ComputerNode> list){//runs O(n), since m>=n O(m) >= O(n) from above
+        int i = 0;
+        int j = list.size()-1;
+        while(i<j){
+            ComputerNode temp = list.get(i);
+            list.set(i,list.get(j));
+            list.set(j,temp);
+            j--;
+            i++;
+        }
+        return list;
+
     }
 
     public HashMap<Integer, List<ComputerNode>> getComputerMapping(){
