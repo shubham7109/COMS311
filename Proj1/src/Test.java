@@ -11,7 +11,7 @@ public class Test {
             //all small work
             //all medium work
             //all large work
-            File file = new File("large_5.txt");
+            File file = new File("small_5.txt");
 
             Scanner input = new Scanner(file);
 

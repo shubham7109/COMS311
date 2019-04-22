@@ -15,7 +15,7 @@ public class MainTest {
 
         communicationsMonitor.createGraph();
 
-        System.out.println("lol");
+        communicationsMonitor.printGraph();
 
     }
 }

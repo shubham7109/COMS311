@@ -1,15 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4eead5a3-ddde-4225-ae89-8dc52f404ec5" name="Default Changelist" comment="">
+    <list default="true" id="b7edf2e5-2e11-4f43-bbb5-dd20451f6bf4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Proj1/.idea/libraries/Project1_CarterRonald_ShubhamSharma.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj1/.idea/libraries/Project1_CarterRonald_ShubhamSharma.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/.idea/libraries/Project1_CarterRonald_ShubhamSharma1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj1/.idea/libraries/Project1_CarterRonald_ShubhamSharma1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/.idea/libraries/Project1_CarterRonald_ShubhamSharma2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj1/.idea/libraries/Project1_CarterRonald_ShubhamSharma2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj1/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/Endpoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/Intervals$Interval.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/Intervals.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/JUnitTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/Project1_CarterRonald_ShubhamSharma.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/RBTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/degenerate_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/large_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/large_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/large_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/large_4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/large_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/medium_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/medium_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/medium_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/medium_4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/medium_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/small_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/small_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/small_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/small_4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/COMS311/small_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/Proj1/Endpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj1/out/production/Proj1/Endpoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/Proj1/Intervals$Interval.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj1/out/production/Proj1/Intervals$Interval.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/Proj1/Intervals.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj1/out/production/Proj1/Intervals.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/Proj1/JUnitTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj1/out/production/Proj1/JUnitTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/Proj1/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj1/out/production/Proj1/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/Proj1/RBTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj1/out/production/Proj1/RBTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/out/production/Proj1/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj1/out/production/Proj1/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj1/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj1/src/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proj2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Proj2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proj2/CommunicationsMonitor$ComputerTripleInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proj2/CommunicationsMonitor$ComputerTripleInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proj2/CommunicationsMonitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proj2/CommunicationsMonitor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proj2/ComputerNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proj2/ComputerNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proj2/META-INF/Proj2.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proj2/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proj2/MainTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CommunicationsMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommunicationsMonitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,63 +60,17 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Proj2$Main.ic" NAME="Main Coverage Results" MODIFIED="1555528538039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1966669513">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="181" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="181" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="54" lean-forward="true" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CommunicationsMonitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="126" selection-start-line="126" selection-end-line="126" />
-              <folding>
-                <element signature="e#4907#4908#0" expanded="true" />
-                <element signature="e#4934#4935#0" expanded="true" />
-                <element signature="e#5005#5006#0" expanded="true" />
-                <element signature="e#5043#5044#0" expanded="true" />
-                <element signature="e#5101#5102#0" expanded="true" />
-                <element signature="e#5146#5147#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -82,14 +78,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ComputerNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+            <state relative-caret-position="30">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CommunicationsMonitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1657">
+              <caret line="130" column="27" selection-start-line="130" selection-start-column="27" selection-end-line="130" selection-end-column="27" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#449#450#0" expanded="true" />
-                <element signature="e#481#482#0" expanded="true" />
-                <element signature="e#768#769#0" expanded="true" />
-                <element signature="e#818#819#0" expanded="true" />
+                <element signature="e#272#273#0" expanded="true" />
+                <element signature="e#327#328#0" expanded="true" />
+                <element signature="e#5299#5300#0" expanded="true" />
+                <element signature="e#5326#5327#0" expanded="true" />
+                <element signature="e#5397#5398#0" expanded="true" />
+                <element signature="e#5435#5436#0" expanded="true" />
+                <element signature="e#5493#5494#0" expanded="true" />
+                <element signature="e#5538#5539#0" expanded="true" />
+                <element signature="e#5927#5928#0" expanded="true" />
+                <element signature="e#5963#5964#0" expanded="true" />
+                <element signature="e#5996#5997#0" expanded="true" />
+                <element signature="e#6032#6033#0" expanded="true" />
+                <element signature="e#6073#6074#0" expanded="true" />
+                <element signature="e#6113#6114#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,41 +111,28 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/ComputerNode.java" />
         <option value="$PROJECT_DIR$/src/MainTest.java" />
         <option value="$PROJECT_DIR$/src/CommunicationsMonitor.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="948" />
-    <option name="width" value="981" />
-    <option name="height" value="1032" />
+    <option name="y" value="27" />
+    <option name="width" value="960" />
+    <option name="height" value="1053" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -149,15 +150,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555529837349" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -172,213 +170,110 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+    <configuration name="MainTest" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="MainTest" />
       <module name="Proj2" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4eead5a3-ddde-4225-ae89-8dc52f404ec5" name="Default Changelist" comment="" />
-      <created>1555007048768</created>
+      <changelist id="b7edf2e5-2e11-4f43-bbb5-dd20451f6bf4" name="Default Changelist" comment="" />
+      <created>1555904501606</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1555007048768</updated>
+      <updated>1555904501606</updated>
     </task>
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2793177" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3358862" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" weight="0.3293348" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3293348" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3275488" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.48698482" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3293348" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5768811" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3285968" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32955465" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/MainTest.java</url>
-          <line>17</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CommunicationsMonitor.java</url>
-          <line>126</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="((java.util.LinkedList)((HashMap.Node)computerMapping.entrySet().toArray()[0]).getValue()).get(0)" custom="java.util.LinkedList,java.util.HashMap.Node" />
-      </configuration>
-    </watches-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Comparator.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/Comparator.java">
+    <entry file="jar:///usr/lib/jvm/jdk-12/lib/src.zip!/java.base/java/util/Comparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
+        <state relative-caret-position="196">
           <caret line="149" column="8" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ComputerNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CommunicationsMonitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
+        <state relative-caret-position="1657">
+          <caret line="130" column="27" selection-start-line="130" selection-start-column="27" selection-end-line="130" selection-end-column="27" />
           <folding>
-            <element signature="e#4907#4908#0" expanded="true" />
-            <element signature="e#4934#4935#0" expanded="true" />
-            <element signature="e#5005#5006#0" expanded="true" />
-            <element signature="e#5043#5044#0" expanded="true" />
-            <element signature="e#5101#5102#0" expanded="true" />
-            <element signature="e#5146#5147#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#5299#5300#0" expanded="true" />
+            <element signature="e#5326#5327#0" expanded="true" />
+            <element signature="e#5397#5398#0" expanded="true" />
+            <element signature="e#5435#5436#0" expanded="true" />
+            <element signature="e#5493#5494#0" expanded="true" />
+            <element signature="e#5538#5539#0" expanded="true" />
+            <element signature="e#5927#5928#0" expanded="true" />
+            <element signature="e#5963#5964#0" expanded="true" />
+            <element signature="e#5996#5997#0" expanded="true" />
+            <element signature="e#6032#6033#0" expanded="true" />
+            <element signature="e#6073#6074#0" expanded="true" />
+            <element signature="e#6113#6114#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="54" lean-forward="true" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+        <state relative-caret-position="255">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
+      <state key="ProjectJDKs.UI">
         <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Proj2</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
+          <last-edited>12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

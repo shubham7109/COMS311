@@ -76,9 +76,9 @@ public class CommunicationsMonitor {
                    }                           
                }               
             } 
-            ComputerNode node1 = null;
-            ComputerNode node2 = null;
-            if(createNode1 == true){
+            ComputerNode node1;
+            ComputerNode node2;
+            if(createNode1){
                 LinkedList<ComputerNode> hashList = new LinkedList<>();
                 node1 = new ComputerNode(triple.getNode1(), triple.getTimeStamp());
 
@@ -92,7 +92,7 @@ public class CommunicationsMonitor {
                 }
             }
             
-            if(createNode2 == true){
+            if(createNode2){
                 node2 = new ComputerNode(triple.getNode2(), triple.getTimeStamp());
                 LinkedList<ComputerNode> hashList = new LinkedList<>();
                 if(previousTimestamp2!=null){
@@ -124,6 +124,22 @@ public class CommunicationsMonitor {
             }
             compNode1.addOutNeighbors(compNode2);
             compNode2.addOutNeighbors(compNode1);
+        }
+    }
+
+    public void printGraph(){
+        System.out.println();
+        for ( Integer key: computerMapping.keySet()) {
+            System.out.println("Computer: " + computerMapping.get(key).get(0).getID());
+            for(ComputerNode computerNode : computerMapping.get(key)){
+                System.out.print("->TimeStamp " +  computerNode.getTimestamp()+": ");
+                for(ComputerNode neighbors: computerNode.getOutNeighbors()){
+                    System.out.print("("+neighbors.getID() +  ","  + neighbors.getTimestamp() + ") ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+
         }
     }
 
