@@ -28,6 +28,30 @@ public class MainTest {
             System.out.println();
         }
 
+        list = communicationsMonitor.queryInfection(1,4,2,16);
+
+        if(list == null)
+            System.out.println("No path found");
+        else{
+            System.out.println();
+            for(ComputerNode computerNode : list){
+                System.out.print("("+computerNode.getID() +  ","  + computerNode.getTimestamp() + ") ");
+            }
+            System.out.println();
+        }
+
+        list = communicationsMonitor.queryInfection(1,3,5,4);
+
+        if(list == null)
+            System.out.println("\nNo path found");
+        else{
+            System.out.println();
+            for(ComputerNode computerNode : list){
+                System.out.print("("+computerNode.getID() +  ","  + computerNode.getTimestamp() + ") ");
+            }
+            System.out.println();
+        }
+
         //communicationsMonitor.printGraph();
 
 

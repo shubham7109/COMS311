@@ -202,10 +202,10 @@ public class CommunicationsMonitor {
         if (computerNodes == null){
             return null;
         }
+        //dont break here, we need the node with the latest timestamp
         for (ComputerNode node: computerNodes) {
-            if(node.getTimestamp() >= y){
+            if(node.getTimestamp() <= y){
                 endNode = node;
-                break;
             }
         }
 
@@ -215,7 +215,13 @@ public class CommunicationsMonitor {
 
         // TODO Check that this is in 0(m) time
         // DFS starts here
-
+        //init steps for multiple calls runs in O(n) depsite being nested for loops it really just goes through each node in the graph
+        for ( Integer key: computerMapping.keySet()) {
+            for(int i=0; i<computerMapping.get(key).size(); i++) {
+                computerMapping.get(key).get(i).setPred(null);
+                computerMapping.get(key).get(i).setColor(0);
+            }
+        }
 
         ArrayList<ComputerNode> path = new ArrayList<ComputerNode>();
         ArrayList<ComputerNode> testDFS = new ArrayList<ComputerNode>();
