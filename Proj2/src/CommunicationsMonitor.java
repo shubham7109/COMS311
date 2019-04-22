@@ -159,16 +159,26 @@ public class CommunicationsMonitor {
 
         //Get the starting computer node
         ComputerNode startingNode = null;
-        for ( Integer key: computerMapping.keySet()) {
-            for(int i=0; i<computerMapping.get(key).size(); i++){
-                if(computerMapping.get(key).get(i).getID() == c1){
-                    if(computerMapping.get(key).get(i).getTimestamp() >= x){
-                        startingNode  = computerMapping.get(key).get(i);
-                        break;
-                    }
-                }
+
+        List<ComputerNode> computerNodes = computerMapping.get(c1);
+
+        for (ComputerNode node: computerNodes) {
+            if(node.getTimestamp() >= x){
+                startingNode = node;
+                break;
             }
         }
+
+//        for ( Integer key: computerMapping.keySet()) {
+//            for(int i=0; i<computerMapping.get(key).size(); i++){
+//                if(computerMapping.get(key).get(i).getID() == c1){
+//                    if(computerMapping.get(key).get(i).getTimestamp() >= x){
+//                        startingNode  = computerMapping.get(key).get(i);
+//                        break;
+//                    }
+//                }
+//            }
+//        }
 
         if(startingNode == null){
             return null; //c1 does not exist in graph or c1 does not communicate when infected
@@ -177,14 +187,23 @@ public class CommunicationsMonitor {
 
         //Get the end computer node
         ComputerNode endNode = null;
-        for ( Integer key: computerMapping.keySet()) {
-            for(int i=0; i<computerMapping.get(key).size(); i++){
-                if(computerMapping.get(key).get(i).getID() == c2){
-                    if(computerMapping.get(key).get(i).getTimestamp() >= y){
-                        endNode  = computerMapping.get(key).get(i);
-                        break;
-                    }
-                }
+//        for ( Integer key: computerMapping.keySet()) {
+//            for(int i=0; i<computerMapping.get(key).size(); i++){
+//                if(computerMapping.get(key).get(i).getID() == c2){
+//                    if(computerMapping.get(key).get(i).getTimestamp() >= y){
+//                        endNode  = computerMapping.get(key).get(i);
+//                        break;
+//                    }
+//                }
+//            }
+//        }
+
+        computerNodes = computerMapping.get(c2);
+
+        for (ComputerNode node: computerNodes) {
+            if(node.getTimestamp() >= y){
+                endNode = node;
+                break;
             }
         }
 

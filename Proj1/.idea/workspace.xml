@@ -2,37 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1080dd9a-c00b-4105-88e1-adecbd778123" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Project1_CarterRonald_ShubhamSharma.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Project1_CarterRonald_ShubhamSharma.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Project1_CarterRonald_ShubhamSharma1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Project1_CarterRonald_ShubhamSharma1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Project1_CarterRonald_ShubhamSharma2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Project1_CarterRonald_ShubhamSharma2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/Endpoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/Intervals$Interval.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/Intervals.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/JUnitTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/Project1_CarterRonald_ShubhamSharma.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/RBTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/degenerate_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/large_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/large_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/large_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/large_4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/large_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/medium_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/medium_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/medium_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/medium_4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/medium_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/small_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/small_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/small_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/small_4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMS311/small_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proj1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Proj1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proj1/Endpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proj1/Endpoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proj1/Intervals$Interval.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proj1/Intervals$Interval.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proj1/Intervals.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proj1/Intervals.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proj1/JUnitTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proj1/JUnitTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proj1/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proj1/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proj1/RBTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proj1/RBTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proj1/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proj1/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proj1/degenerate_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proj1/degenerate_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj2/Proj2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj2/Proj2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj2/out/production/Proj2/CommunicationsMonitor$ComputerTripleInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj2/out/production/Proj2/CommunicationsMonitor$ComputerTripleInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj2/out/production/Proj2/CommunicationsMonitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj2/out/production/Proj2/CommunicationsMonitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj2/out/production/Proj2/ComputerNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj2/out/production/Proj2/ComputerNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj2/out/production/Proj2/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj2/out/production/Proj2/MainTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj2/src/CommunicationsMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj2/src/CommunicationsMonitor.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,12 +30,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="76">
+              <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Intervals.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="70" column="40" lean-forward="true" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -65,10 +62,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-127" />
     <option name="y" value="27" />
-    <option name="width" value="1390" />
-    <option name="height" value="1007" />
+    <option name="width" value="960" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -76,6 +72,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -93,11 +90,13 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -113,6 +112,8 @@
   </component>
   <component name="RunManager">
     <configuration name="Test" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:\Program Files\Java\jdk1.8.0_201\jre" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Test" />
       <module name="Proj1" />
       <method v="2">
@@ -134,35 +135,35 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17929563" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18218623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3293348" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3285968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3285968" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -209,14 +210,101 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/small_5.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="136">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Intervals.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="70" column="40" lean-forward="true" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Proj1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
