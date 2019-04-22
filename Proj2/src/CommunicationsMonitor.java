@@ -3,11 +3,11 @@ import java.util.*;
 public class CommunicationsMonitor {
 
     private boolean isCreateGraphCalled = false;
-    private ArrayList<ComputerTripleInfo> tripleInfoArrayList;
+    private LinkedList<ComputerTripleInfo> tripleInfoArrayList;
     private HashMap<Integer, List<ComputerNode>> computerMapping;
 
     public CommunicationsMonitor(){
-        tripleInfoArrayList = new ArrayList<>();
+        tripleInfoArrayList = new LinkedList<>();
     }
 
     //Should run in O(1)
@@ -143,7 +143,85 @@ public class CommunicationsMonitor {
         }
     }
 
+    /**
+     *
+     * @param c1 Computer infected at time x
+     * @param c2 Check if computer infected by time y
+     * @return Ordered list that represents
+     * the transmission sequence.
+     */
     public List<ComputerNode> queryInfection(int c1, int c2, int x, int y){
+
+        if(y < x){
+            return null; // C2 cannot get infected when C1 is not infected
+        }
+
+
+        //Get the starting computer node
+        ComputerNode startingNode = null;
+        for ( Integer key: computerMapping.keySet()) {
+            for(int i=0; i<computerMapping.get(key).size(); i++){
+                if(computerMapping.get(key).get(i).getID() == c1){
+                    if(computerMapping.get(key).get(i).getTimestamp() >= x){
+                        startingNode  = computerMapping.get(key).get(i);
+                        break;
+                    }
+                }
+            }
+        }
+
+        if(startingNode == null){
+            return null; //c1 does not exist in graph or c1 does not communicate when infected
+        }
+
+
+        //Get the end computer node
+        ComputerNode endNode = null;
+        for ( Integer key: computerMapping.keySet()) {
+            for(int i=0; i<computerMapping.get(key).size(); i++){
+                if(computerMapping.get(key).get(i).getID() == c2){
+                    if(computerMapping.get(key).get(i).getTimestamp() >= y){
+                        endNode  = computerMapping.get(key).get(i);
+                        break;
+                    }
+                }
+            }
+        }
+
+        if(endNode == null){
+            return null; //c2 does not exist in graph or c2 does not communicate when infected
+        }
+
+        // TODO Check that this is in 0(m) time
+        // BFS starts here
+
+        Queue<ComputerNode> queue = new LinkedList<>();
+        ArrayList<ComputerNode> explored = new ArrayList<>();
+
+        if(startingNode.equals(endNode)){
+            explored.add(startingNode);
+            return explored;
+        }
+
+
+        queue.add(startingNode);
+        explored.add(startingNode);
+
+        while(!queue.isEmpty()){
+            ComputerNode current = queue.remove();
+            if(current.equals(endNode)) {
+                explored.add(current);
+                return explored;
+            }
+            else{
+                if(current.getOutNeighbors().isEmpty())
+                    return null;
+                else
+                    queue.addAll(current.getOutNeighbors());
+            }
+            explored.add(current);
+        }
+
         return null;
     }
 

@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.List;
 
 public class MainTest {
 
@@ -15,7 +16,22 @@ public class MainTest {
 
         communicationsMonitor.createGraph();
 
-        communicationsMonitor.printGraph();
+        List<ComputerNode> list = communicationsMonitor.queryInfection(1,3,4,8);
+
+        if(list == null)
+            System.out.println("No path found");
+        else{
+            System.out.println();
+            for(ComputerNode computerNode : list){
+                System.out.print("("+computerNode.getID() +  ","  + computerNode.getTimestamp() + ") ");
+            }
+            System.out.println();
+        }
+
+        //communicationsMonitor.printGraph();
+
+
+
 
     }
 }
