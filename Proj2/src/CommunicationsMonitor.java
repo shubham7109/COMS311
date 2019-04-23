@@ -15,9 +15,6 @@ public class CommunicationsMonitor {
 
         if(isCreateGraphCalled)
             return;
-
-//         ComputerNode node1 = new ComputerNode(c1,timestamp);
-//         ComputerNode node2 = new ComputerNode(c2,timestamp);
         tripleInfoArrayList.add(new ComputerTripleInfo(c1,c2,timestamp)); // Basically does (C1,C2,time)
 
     }
@@ -60,22 +57,8 @@ public class CommunicationsMonitor {
                        }
                    }                           
                }               
-            }           
-        
-                   
-        
-            if(computerMapping.get(triple.getNode2())!=null){
-               for(ComputerNode neighbor: computerMapping.get(triple.getNode2())){
-                   if(neighbor.getID()== triple.getNode2()){
-                       if(neighbor.getTimestamp() != triple.getTimeStamp()){
-                           previousTimestamp2 = neighbor;
-                       }
-                       else{
-                           createNode2 = false;
-                       }
-                   }                           
-               }               
-            } 
+            }
+
             ComputerNode node1;
             ComputerNode node2;
             if(createNode1){
@@ -90,6 +73,21 @@ public class CommunicationsMonitor {
                     hashList.add(node1);
                     computerMapping.put(node1.getID(), hashList);
                 }
+            }
+        
+                   
+        
+            if(computerMapping.get(triple.getNode2())!=null){
+               for(ComputerNode neighbor: computerMapping.get(triple.getNode2())){
+                   if(neighbor.getID()== triple.getNode2()){
+                       if(neighbor.getTimestamp() != triple.getTimeStamp()){
+                           previousTimestamp2 = neighbor;
+                       }
+                       else{
+                           createNode2 = false;
+                       }
+                   }                           
+               }               
             }
             
             if(createNode2){
@@ -144,7 +142,6 @@ public class CommunicationsMonitor {
     }
 
     /**
-     *
      * @param c1 Computer infected at time x
      * @param c2 Check if computer infected by time y
      * @return Ordered list that represents
@@ -156,11 +153,13 @@ public class CommunicationsMonitor {
             return null; // C2 cannot get infected when C1 is not infected
         }
 
-
         //Get the starting computer node
         ComputerNode startingNode = null;
 
         List<ComputerNode> computerNodes = computerMapping.get(c1);
+
+
+        if(computerNodes == null) return null;
 
         for (ComputerNode node: computerNodes) {
             if(node.getTimestamp() >= x){
@@ -169,34 +168,12 @@ public class CommunicationsMonitor {
             }
         }
 
-//        for ( Integer key: computerMapping.keySet()) {
-//            for(int i=0; i<computerMapping.get(key).size(); i++){
-//                if(computerMapping.get(key).get(i).getID() == c1){
-//                    if(computerMapping.get(key).get(i).getTimestamp() >= x){
-//                        startingNode  = computerMapping.get(key).get(i);
-//                        break;
-//                    }
-//                }
-//            }
-//        }
-
         if(startingNode == null){
             return null; //c1 does not exist in graph or c1 does not communicate when infected
         }
 
-
         //Get the end computer node
         ComputerNode endNode = null;
-//        for ( Integer key: computerMapping.keySet()) {
-//            for(int i=0; i<computerMapping.get(key).size(); i++){
-//                if(computerMapping.get(key).get(i).getID() == c2){
-//                    if(computerMapping.get(key).get(i).getTimestamp() >= y){
-//                        endNode  = computerMapping.get(key).get(i);
-//                        break;
-//                    }
-//                }
-//            }
-//        }
 
         computerNodes = computerMapping.get(c2);
         if (computerNodes == null){
@@ -224,7 +201,6 @@ public class CommunicationsMonitor {
         }
 
         ArrayList<ComputerNode> path = new ArrayList<ComputerNode>();
-        ArrayList<ComputerNode> testDFS = new ArrayList<ComputerNode>();
 
         DFSVisit_Path(startingNode);
 
@@ -242,7 +218,7 @@ public class CommunicationsMonitor {
         }
 
         path = ReverseList(path);
-        
+
         return path;
 
 
@@ -284,9 +260,12 @@ public class CommunicationsMonitor {
         return computerMapping.get(c);
     }
 
+    public LinkedList<ComputerTripleInfo> getTripleInfoArrayList() {
+        return tripleInfoArrayList;
+    }
 
     // Custom class used to keep track of each computer interaction.
-    private class ComputerTripleInfo{
+    public class ComputerTripleInfo{
 
         int node1;
         int node2;
