@@ -28,7 +28,7 @@ public class TestCMSimple {
 			}
 		long endTime = System.nanoTime();
 		long diff = (endTime - startTime)/1000; //microseconds
-		
+
 		//Actual time limit here could be changed in actual test.
 		if(diff > 5000) fail("Avg time of addCommunication is not in O(1), takes too long: "+diff);
 	}
@@ -78,11 +78,11 @@ public class TestCMSimple {
 		}
 		cMon.createGraph();
 		List<ComputerNode> infpath = cMon.queryInfection(1, 3, 4, 8);
-		
+
 		String msg = checkCNList(infpath, new int[][]{{1, 4},{2, 4}, {2, 8}, {4, 8}, {3, 8}});
 		if(!msg.equals("")) fail("Tested queryInfection(1, 3, 4, 8), for example 1. "+msg);
 	}
-	
+
 	//Check if HashMap is created correctly or not (after createGraph() call)
 	@Test(timeout = 2000)
 	public void checkHashMap() {
@@ -93,15 +93,15 @@ public class TestCMSimple {
 		}
 		cMon.createGraph();
 		HashMap<Integer, List<ComputerNode>> compMapping = cMon.getComputerMapping();
-		
+
 		//Check Size
         Assert.assertEquals("4 nodes entered, thus size of Hashmap should be 4", 4, compMapping.size());
-		
+
 		//Check for node 4
 		String msg = checkCNList(compMapping.get(4), new int[][]{{4, 8},{4, 12}});
 		if(!msg.equals("")) fail("Incorrect list in HashMap for key 4, "+msg);
 	}
-	
+
 	//Check if list is correct or not.
 	@Test(timeout = 2000)
 	public void checkList() {
@@ -111,13 +111,13 @@ public class TestCMSimple {
 			cMon.addCommunication(compMap[i][0], compMap[i][1], compMap[i][2]);
 		}
 		cMon.createGraph();
-		
+
 		//Check for node 4
 		String msg = checkCNList(cMon.getComputerMapping(1), new int[][]{{1, 4},{1, 12}});
 		if(!msg.equals("")) fail(msg);
 	}
-	
-	
+
+
 	//Check if adjacency list is correct or not
 	@Test(timeout = 2000)
 	public void checkAdjList() {
@@ -127,17 +127,17 @@ public class TestCMSimple {
 			cMon.addCommunication(compMap[i][0], compMap[i][1], compMap[i][2]);
 		}
 		cMon.createGraph();
-		
+
 		//Check for node (4, 8) (First node for 4)
 		ComputerNode c = cMon.getComputerMapping().get(2).get(1);
 		if(c.getID() != 2 || c.getTimestamp() != 8)
-			fail("For C2 second node should be: (2, 8);, but got ("+c.getID()+", "+ c.getTimestamp()+")."); 
+			fail("For C2 second node should be: (2, 8);, but got ("+c.getID()+", "+ c.getTimestamp()+").");
 		String msg = checkCNList(c.getOutNeighbors(), new int[][]{{4, 8}});
 		if(!msg.equals("")) fail(msg);
 	}
-	
-	
-	
+
+
+
 	private String checkCNList(List<ComputerNode> cnList, int[][] cnArray) {
 		String diff = "";
 		if(cnList.size() != cnArray.length) return "Expected size of list is: "+cnArray.length+" but was: "+cnList.size();

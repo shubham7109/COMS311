@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a95cdd37-ebfb-46de-a2f6-c5b31bf6d914" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Proj1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj1/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="881d1ed9-2f09-40d2-a13c-ae5b74535f59" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proj2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Proj2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proj2/CommunicationsMonitor$ComputerTripleInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proj2/CommunicationsMonitor$ComputerTripleInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proj2/CommunicationsMonitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proj2/CommunicationsMonitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proj2/ComputerNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proj2/ComputerNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proj2/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proj2/MainTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CommunicationsMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommunicationsMonitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ComputerNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComputerNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/CommunicationsMonitorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CommunicationsMonitorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestCMSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCMSimple.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,13 +18,46 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1966669513">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="68" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="68" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MainTest.java">
+        <entry file="file://$PROJECT_DIR$/src/CommunicationsMonitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -34,83 +65,89 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ComputerNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-335">
-              <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+            <state>
+              <caret column="3" lean-forward="true" selection-start-column="3" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#791#792#0" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CommunicationsMonitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="96" column="44" lean-forward="true" selection-start-line="96" selection-start-column="44" selection-end-line="96" selection-end-column="44" />
-              <folding>
-                <element signature="e#7663#7677#0" expanded="true" />
-                <element signature="e#9217#9218#0" expanded="true" />
-                <element signature="e#9255#9256#0" expanded="true" />
-                <element signature="e#9313#9314#0" expanded="true" />
-                <element signature="e#9358#9359#0" expanded="true" />
-                <element signature="e#9221#9222#0" expanded="true" />
+                <element signature="e#506#507#0" expanded="true" />
+                <element signature="e#533#534#0" expanded="true" />
+                <element signature="e#579#580#0" expanded="true" />
+                <element signature="e#611#612#0" expanded="true" />
+                <element signature="e#637#638#0" expanded="true" />
+                <element signature="e#662#663#0" expanded="true" />
+                <element signature="e#695#696#0" expanded="true" />
+                <element signature="e#727#728#0" expanded="true" />
+                <element signature="e#777#778#0" expanded="true" />
+                <element signature="e#816#817#0" expanded="true" />
+                <element signature="e#900#901#0" expanded="true" />
+                <element signature="e#934#935#0" expanded="true" />
+                <element signature="e#1132#1133#0" expanded="true" />
+                <element signature="e#1182#1183#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MainTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-425">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/TestCMSimple.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/CommunicationsMonitorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JUnit4 Test Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>c1</find>
-      <find>linked</find>
-      <find>li</find>
-      <find>computerNodeList</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="C:/COMS 342/HW 2/hw2code" value="PREVIEW" />
+        <entry key="C:/COMS 342/HW 2/hw2codeNewGrammar" value="PREVIEW" />
+        <entry key="C:/COMS 342/HW3/HW3 Origin Code/hw3code" value="PREVIEW" />
+        <entry key="C:/COMS 342/HW4/hw4code" value="PREVIEW" />
+        <entry key="C:/COMS 342/HW5/HW5CodeComplete/hw5code" value="PREVIEW" />
+        <entry key="C:/COMS 342/HW7/hw7code" value="PREVIEW" />
+        <entry key="C:/COMS 342/HW8/hw8code" value="PREVIEW" />
+        <entry key="C:/COMS 342/recitation1-code" value="PREVIEW" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/MainTest.java" />
-        <option value="$PROJECT_DIR$/src/TestCMSimple.java" />
-        <option value="$PROJECT_DIR$/src/CommunicationsMonitorTest.groovy" />
-        <option value="$PROJECT_DIR$/src/ComputerNode.java" />
-        <option value="$PROJECT_DIR$/tests/CommunicationsMonitorTest.java" />
         <option value="$PROJECT_DIR$/src/CommunicationsMonitor.java" />
+        <option value="$PROJECT_DIR$/src/ComputerNode.java" />
         <option value="$PROJECT_DIR$/tests/TestCMSimple.java" />
+        <option value="$PROJECT_DIR$/tests/CommunicationsMonitorTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="27" />
-    <option name="width" value="960" />
-    <option name="height" value="1053" />
+    <option name="x" value="948" />
+    <option name="width" value="981" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -118,7 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -141,34 +177,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556054181788" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="create.test.in.the.same.root" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556131803776" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="restartRequiresConfirmation" value="false" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-      <recent name="groovy.util.GroovyTestCase" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\shubham\Desktop\COMS311\Proj2\tests" />
-    </key>
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -182,7 +199,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestCMSimple">
+  <component name="RunManager">
     <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainTest" />
       <module name="Proj2" />
@@ -190,34 +207,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommunicationsMonitorTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
-      <module name="Proj2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CommunicationsMonitorTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestCMSimple" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Proj2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestCMSimple" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.MainTest" />
-      <item itemvalue="JUnit.CommunicationsMonitorTest" />
-      <item itemvalue="JUnit.TestCMSimple" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestCMSimple" />
         <item itemvalue="Application.MainTest" />
       </list>
     </recent_temporary>
@@ -227,244 +218,110 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a95cdd37-ebfb-46de-a2f6-c5b31bf6d914" name="Default Changelist" comment="" />
-      <created>1555969377608</created>
+      <changelist id="881d1ed9-2f09-40d2-a13c-ae5b74535f59" name="Default Changelist" comment="" />
+      <created>1556131249094</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1555969377608</updated>
+      <updated>1556131249094</updated>
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="CommunicationsMonitorTest - 2019.04.23 at 15h 15m 57s.xml">
-      <configuration name="CommunicationsMonitorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CommunicationsMonitorTest - 2019.04.23 at 15h 24m 39s.xml">
-      <configuration name="CommunicationsMonitorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCMSimple - 2019.04.23 at 15h 44m 54s.xml">
-      <configuration name="TestCMSimple" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCMSimple - 2019.04.23 at 15h 47m 34s.xml">
-      <configuration name="TestCMSimple" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCMSimple - 2019.04.23 at 15h 47m 54s.xml">
-      <configuration name="TestCMSimple" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCMSimple - 2019.04.23 at 15h 48m 35s.xml">
-      <configuration name="TestCMSimple" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCMSimple - 2019.04.23 at 15h 49m 04s.xml">
-      <configuration name="TestCMSimple" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCMSimple - 2019.04.23 at 15h 50m 34s.xml">
-      <configuration name="TestCMSimple" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCMSimple - 2019.04.23 at 15h 50m 38s.xml">
-      <configuration name="TestCMSimple" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCMSimple - 2019.04.23 at 15h 58m 44s.xml">
-      <configuration name="TestCMSimple" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18299595" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39609236" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.6980462" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3285968" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3285968" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="right" id="Maven" order="8" />
     </layout>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tests/CommunicationsMonitorTest.java</url>
-          <line>63</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CommunicationsMonitor.java</url>
-          <line>224</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tests/TestCMSimple.java</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/CommunicationsMonitorTest.groovy" />
-    <entry file="file://$PROJECT_DIR$/tests/CommunicationsMonitorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/CommunicationsMonitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ComputerNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-335">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        <state>
+          <caret column="3" lean-forward="true" selection-start-column="3" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CommunicationsMonitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="96" column="44" lean-forward="true" selection-start-line="96" selection-start-column="44" selection-end-line="96" selection-end-column="44" />
-          <folding>
-            <element signature="e#7663#7677#0" expanded="true" />
-            <element signature="e#9217#9218#0" expanded="true" />
-            <element signature="e#9255#9256#0" expanded="true" />
-            <element signature="e#9313#9314#0" expanded="true" />
-            <element signature="e#9358#9359#0" expanded="true" />
-            <element signature="e#9221#9222#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#533#534#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#900#901#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
+            <element signature="e#1132#1133#0" expanded="true" />
+            <element signature="e#1182#1183#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/TestCMSimple.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CommunicationsMonitorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-425">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Proj2</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>10</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

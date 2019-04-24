@@ -13,7 +13,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class CommunicationsMonitorTest {
-	
+
 	CommunicationsMonitor cm;
 	LinkedList<CommunicationsMonitor.ComputerTripleInfo> communications;
 
@@ -26,20 +26,20 @@ public class CommunicationsMonitorTest {
 		cm.addCommunication(1, 4, 12);
 		communications = cm.getTripleInfoArrayList();
 	}
-	
+
 	@Test
 	public void testComputerNodeEquality() {
 		ComputerNode t1 = new ComputerNode(1, 5);
 		ComputerNode t2 = new ComputerNode(1, 5);
 		ComputerNode t3 = new ComputerNode(2, 5);
-		
+
 		assertFalse(t1.equals(null));
-		
+
 		assertTrue(t1.equals(t2));
 		assertFalse(t1.equals(t3));
 	}
 
-	
+
 	@Test
 	public void testAddCommunication() {
 		assertEquals(4, communications.size());
@@ -47,18 +47,18 @@ public class CommunicationsMonitorTest {
 		assertEquals(2, communications.get(1).getNode1());
 		assertEquals(3, communications.get(2).getNode1());
 		assertEquals(1, communications.get(3).getNode1());
-		
+
 		assertEquals(2, communications.get(0).getNode2());
 		assertEquals(4, communications.get(1).getNode2());
 		assertEquals(4, communications.get(2).getNode2());
 		assertEquals(4, communications.get(3).getNode2());
-		
+
 		assertEquals(4,(int) communications.get(0).getTimeStamp());
 		assertEquals(8,(int) communications.get(1).getTimeStamp());
 		assertEquals(8,(int) communications.get(2).getTimeStamp());
 		assertEquals(12,(int) communications.get(3).getTimeStamp());
 	}
-	
+
 	@Test
 	public void testCreateGraph() {
 		cm.createGraph();
@@ -78,7 +78,7 @@ public class CommunicationsMonitorTest {
 		assertEquals(1, c1Neighbors.size());
 		assertEquals(4, c1Neighbors.get(0).getID());
 		assertEquals(12, c1Neighbors.get(0).getTimestamp());
-		
+
 		//C2
 		List<ComputerNode> c2 = adjList.get(2);
 		assertEquals(2, c2.size());
@@ -94,7 +94,7 @@ public class CommunicationsMonitorTest {
 		assertEquals(1, c2Neighbors.size());
 		assertEquals(4, c2Neighbors.get(0).getID());
 		assertEquals(8, c2Neighbors.get(0).getTimestamp());
-		
+
 		//C3
 		List<ComputerNode> c3 = adjList.get(3);
 		assertEquals(1, c3.size());
@@ -103,7 +103,7 @@ public class CommunicationsMonitorTest {
 		assertEquals(1, c3Neighbors.size());
 		assertEquals(4, c3Neighbors.get(0).getID());
 		assertEquals(8, c3Neighbors.get(0).getTimestamp());
-		
+
 		//C4
 		List<ComputerNode> c4 = adjList.get(4);
 		assertEquals(2, c4.size());
@@ -121,61 +121,61 @@ public class CommunicationsMonitorTest {
 		assertEquals(1, c4Neighbors.size());
 		assertEquals(1, c4Neighbors.get(0).getID());
 		assertEquals(12, c4Neighbors.get(0).getTimestamp());
-		
+
 	}
-	
+
 	@Test
 	public void testAddAfterGraph() {
 		cm.createGraph();
 		cm.addCommunication(6, 7, 3);
 		assertEquals(4, cm.getTripleInfoArrayList().size());
 	}
-	
+
 	@Test
 	public void testQueryInfectionExample1() {
 		cm.createGraph();
 		List<ComputerNode> path = cm.queryInfection(1, 3, 2, 9);
 		HashMap<Integer, List<ComputerNode>> adjList = cm.getComputerMapping();
-		
+
 		assertEquals(adjList.get(1).get(0), path.get(0));
 		assertEquals(adjList.get(2).get(0), path.get(1));
 		assertEquals(adjList.get(2).get(1), path.get(2));
 		assertEquals(adjList.get(4).get(0), path.get(3));
 		assertEquals(adjList.get(3).get(0), path.get(4));
 	}
-	
+
 	@Test
 	public void testQueryInfectionNoNode() {
 		cm.createGraph();
 		List<ComputerNode> path = cm.queryInfection(1, 3, 2, 9);
-		
+
 		path = cm.queryInfection(10, 4, 0, 10);
 		assertEquals(null, path);
 	}
-	
+
 	@Test
 	public void testQueryInfectionNoPath() {
 		cm.createGraph();
 		List<ComputerNode> path = cm.queryInfection(1, 3, 2, 9);
-		
+
 		path = cm.queryInfection(1, 4, 2, 7);
 		assertEquals(null, path);
 	}
-	
+
 	@Test
 	public void testQueryInfectionShortPath() {
 		cm.createGraph();
 		List<ComputerNode> path = cm.queryInfection(1, 3, 2, 9);
 		HashMap<Integer, List<ComputerNode>> adjList = cm.getComputerMapping();
-		
+
 		path = cm.queryInfection(1, 4, 2, 8);
 		assertEquals(adjList.get(1).get(0), path.get(0));
 		assertEquals(adjList.get(2).get(0), path.get(1));
 		assertEquals(adjList.get(2).get(1), path.get(2));
 		assertEquals(adjList.get(4).get(0), path.get(3));
 	}
-	
-	
+
+
 
 }
 

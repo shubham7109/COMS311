@@ -1,3 +1,8 @@
+/**
+ * @author Carter Ronald
+ * @author Shubham Sharma
+ */
+
 import java.util.*;
 
 public class CommunicationsMonitor {
@@ -27,7 +32,7 @@ public class CommunicationsMonitor {
 
         // Step1:
         // Sort the triples by nondecreasing timestamp
-        // TODO Check if this is O(mlogm)
+
         tripleInfoArrayList.sort((ComputerTripleInfo o1, ComputerTripleInfo o2) -> {
             if (o1.getTimeStamp() > o2.getTimeStamp())
                 return 1;
@@ -190,7 +195,7 @@ public class CommunicationsMonitor {
             return null; //c2 does not exist in graph or c2 does not communicate when infected
         }
 
-        // TODO Check that this is in 0(m) time
+
         // DFS starts here
         //init steps for multiple calls runs in O(n) depsite being nested for loops it really just goes through each node in the graph
         for ( Integer key: computerMapping.keySet()) {
